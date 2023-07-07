@@ -1,0 +1,22 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+  <div class="form-group">
+    <input id="login-email" name="email" type="email" required placeholder="Email" ngModel/>
+  </div>
+
+  <div class="form-group">
+    <input id="login-password" name="password" type="password" required  placeholder="Password" minlength="6" ngModel/>
+  </div>
+
+  <div class="form-group login-form-btn-container">
+
+    <button id="login-submit-btn" type="submit" [disabled]="!authForm.valid" [ngClass]="{'disable-btn': !authForm.valid}">
+      {{ isLoginMode ? 'login' : 'sign up' }}
+    </button>
+
+    <button id="login-switch-btn" type="button" (click)="switchLoginMode()">
+      {{ !isLoginMode ? 'switch to login' : 'switch to sign up' }}
+    </button>
+  </div>
+
+</form>
