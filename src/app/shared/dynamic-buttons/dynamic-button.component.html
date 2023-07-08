@@ -1,0 +1,10 @@
+<button
+  [id]="buttonId"
+  [type]="buttonType"
+  class="dynamic-button"
+  (click)="buttonAction.emit()"
+  [ngClass]="buttonStyle"
+  [disabled]="buttonDisable"
+  [ngStyle]="{'opacity': buttonDisable ? 1 : 0.7}">
+  {{ buttonText }}
+</button>

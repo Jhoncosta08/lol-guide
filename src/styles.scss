@@ -2,3 +2,33 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+/*START CHANGE DEFAULT BOOTSTRAP STYLES*/
+
+button:focus, button:active, button:hover, button:target, input:focus, input:active, input:hover, input:target {
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+/*END CHANGE DEFAULT BOOTSTRAP STYLES*/
+
+/*--------------------------------------------------------------------------------------------------*/
+
+/*START GLOBAL APP FONT STYLES*/
+p, h1, h2, h3, h4, h5, h6, label, button, span, a, small, ul, table .btn {
+  font-family: 'frizzQuadrata', Fallback, sans-serif;
+}
+
+::placeholder {
+  font-family: 'frizzQuadrata', Fallback, sans-serif;
+}
+
+@font-face {
+  font-family: 'frizzQuadrata';
+  src: url('./assets/fonts/friz-font.otf') format('opentype');
+}
+/*END GLOBAL APP FONT STYLES*/
+
+/*--------------------------------------------------------------------------------------------------*/

@@ -1,22 +1,51 @@
-<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+<div class="auth-container">
+  <video autoplay loop id="myVideo">
+    <source src="./assets/videos/sona-video.mp4" type="video/mp4">
+  </video>
 
-  <div class="form-group">
-    <input id="login-email" name="email" type="email" required placeholder="Email" ngModel/>
+  <div class="content">
+    <div class="login-container">
+      <div class="login-title-container">
+        <h2>{{ isLoginMode ? 'Login' : 'Sign up' }}</h2>
+      </div>
+
+      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+        <div class="form-group">
+          <input id="login-email" name="email" type="email" required placeholder="Email" ngModel/>
+        </div>
+
+        <div class="form-group">
+          <input id="login-password" name="password" type="password" required  placeholder="Password" minlength="6" ngModel/>
+        </div>
+
+        <div class="form-group login-form-btn-container">
+
+          <app-dynamic-button
+            [buttonId]="'login-submit-btn'"
+            [buttonType]="'submit'"
+            [buttonStyle]="'primary'"
+            [buttonText]="isLoginMode ? 'login' : 'sign up'"
+            [buttonDisable]="!authForm.valid">
+          </app-dynamic-button>
+
+          <app-dynamic-button
+            (buttonAction)="switchLoginMode()"
+            [buttonId]="'login-switch-btn'"
+            [buttonType]="'button'"
+            [buttonStyle]="'primary'"
+            [buttonText]="!isLoginMode ? 'switch to login' : 'switch to sign up'"
+            [buttonDisable]="false">
+          </app-dynamic-button>
+
+        </div>
+        <a routerLink="/homepage">Back to homepage</a>
+
+      </form>
+    </div>
   </div>
 
-  <div class="form-group">
-    <input id="login-password" name="password" type="password" required  placeholder="Password" minlength="6" ngModel/>
-  </div>
+</div>
 
-  <div class="form-group login-form-btn-container">
 
-    <button id="login-submit-btn" type="submit" [disabled]="!authForm.valid" [ngClass]="{'disable-btn': !authForm.valid}">
-      {{ isLoginMode ? 'login' : 'sign up' }}
-    </button>
 
-    <button id="login-switch-btn" type="button" (click)="switchLoginMode()">
-      {{ !isLoginMode ? 'switch to login' : 'switch to sign up' }}
-    </button>
-  </div>
-
-</form>

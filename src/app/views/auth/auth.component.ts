@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NgForm } from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {AuthResponseData} from "../../interfaces/authResponseData";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-auth',
@@ -16,7 +17,7 @@ export class AuthComponent {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
   ) {}
 
   switchLoginMode(): void {
