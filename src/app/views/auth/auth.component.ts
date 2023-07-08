@@ -4,14 +4,13 @@ import {AuthService} from "../../services/auth.service";
 import {AuthResponseData} from "../../interfaces/authResponseData";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
-import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent {
+export class AuthComponent  {
   isLoginMode: boolean = true;
   showSpinner: boolean = false;
 
