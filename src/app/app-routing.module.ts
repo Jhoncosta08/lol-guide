@@ -6,11 +6,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'homepage'
-  },
-  {
-    path: 'homepage',
-    loadChildren: () => import('./views/homepage/homepage.module').then((m) => m.HomepageModule),
+    redirectTo: 'login'
   },
   {
     path: 'login',
