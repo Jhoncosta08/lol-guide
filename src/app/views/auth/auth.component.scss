@@ -36,11 +36,11 @@
   max-width: 30rem;
   max-height: 40vh;
   right: 3%;
-  padding: 20px;
+  padding: 1.25rem;
   background: $transparent-dark-background;
   box-sizing: border-box;
-  box-shadow: 0 0 20px 10px $primary-gold-one;
-  border-radius: 10px;
+  box-shadow: 0 0 1.25 0.625rem $primary-gold-one;
+  border-radius: 0.625rem;
 }
 /*END LOGIN CONTENT STYLE*/
 
@@ -51,8 +51,8 @@
   color: $primary-gold-one;
   text-transform: uppercase;
   font-size: 2rem;
-  letter-spacing: 2px;
-  line-height: 24px;
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
   font-weight: normal;
   margin-bottom: 2rem;
 }
@@ -63,10 +63,12 @@
 /*START LOGIN INPUT STYLES*/
 .input-container {
   border-bottom: 1px solid $primary-gold-one;
+  margin: 2.188rem 0 0 0.188rem;
+  width: 98%;
 }
 
 .input-container:hover {
-  border-bottom: 2px solid $primary-gold-two;
+  border-bottom: 1px solid $primary-gold-three;
 }
 
 .login-input {
@@ -98,5 +100,14 @@
 #password-eye-icons:hover > i {
   color: $secondary-blue-one;
 }
-
 /*END LOGIN ICONS STYLES*/
+
+
+/*START LOGIN BUTTONS CONTAINER STYLES*/
+.login-form-btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.8rem;
+}
+/*END LOGIN BUTTONS CONTAINER STYLES*/

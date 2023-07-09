@@ -1,17 +1,93 @@
-
+@use "src/custom-theme" as *;
 
 .primary {
-
+  background-color: $hextech-dark;
+  color: $primary-gold-one;
+  border: 1px solid $primary-gold-one;
+  &:hover {
+    background-color: $primary-gold-one;
+    color: $hextech-dark;
+  }
 }
 
 .outline {
-
+  background-color: transparent;
+  color: $primary-gold-one;
+  border: 1px solid $primary-gold-one;
+  &:hover {
+    background-color: $primary-gold-one;
+    color: $hextech-dark;
+  }
 }
 
 .warn {
-
+  background-color: $primary-warn;
+  color: $hextech-dark;
+  border: none;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .danger {
+  background-color: $primary-danger;
+  color: $hextech-dark;
+  border: none;
+  &:hover {
+    opacity: 0.7;
+  }
+}
 
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 3px;
+  border: 0;
+  font-size: 18px;
+  transition: 1s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.7);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px)  skewX(-15deg);
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.4);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+  &:hover{
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);
+      opacity: 0.6;
+      transition: 3s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: 3s;
+    }
+  }
 }
