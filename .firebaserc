@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lol-guide-id": {
+      "hosting": {
+        "lol-guide": [
+          "lol-guide-id"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lol-guide-id"
+  }
+}

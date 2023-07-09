@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "lol-guide",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
