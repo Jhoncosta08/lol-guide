@@ -6,10 +6,17 @@
 
 /*START CHANGE DEFAULT BOOTSTRAP STYLES*/
 
-button:focus, button:active, button:hover, button:target, input:focus, input:active, input:hover, input:target {
+button:focus,
+button:active,
+button:hover,
+button:target,
+input:focus,
+input:active,
+input:hover,
+input:target {
   outline: 0;
   -webkit-appearance: none;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 /*END CHANGE DEFAULT BOOTSTRAP STYLES*/

@@ -1,4 +1,7 @@
+@use "src/custom-theme" as *;
 
+
+/*START MAIN CLASS STYLES*/
 .auth-container {
   width: 100%;
   height: 100vh;
@@ -6,16 +9,22 @@
   justify-content: left;
   align-items: center;
 }
+/*END MAIN CLASS STYLES*/
 
 
+
+/*START BACKGROUND VIDEO STYLE*/
 #myVideo {
   position: fixed;
   right: 0;
   min-width: 100%;
   min-height: 100%;
 }
+/*END BACKGROUND VIDEO STYLE*/
 
 
+
+/*START LOGIN CONTENT STYLE*/
 .content {
   position: fixed;
   display: flex;
@@ -28,14 +37,18 @@
   max-height: 40vh;
   right: 3%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: $transparent-dark-background;
   box-sizing: border-box;
-  box-shadow: 0 0 20px 10px rgb(131, 112, 0);
+  box-shadow: 0 0 20px 10px $primary-gold-one;
   border-radius: 10px;
 }
+/*END LOGIN CONTENT STYLE*/
 
+
+
+/*START LOGIN TITLE STYLE*/
 .login-title-container h2 {
-  color: #fff;
+  color: $primary-gold-one;
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -43,3 +56,47 @@
   font-weight: normal;
   margin-bottom: 2rem;
 }
+/*END LOGIN TITLE STYLE*/
+
+
+
+/*START LOGIN INPUT STYLES*/
+.input-container {
+  border-bottom: 1px solid $primary-gold-one;
+}
+
+.input-container:hover {
+  border-bottom: 2px solid $primary-gold-two;
+}
+
+.login-input {
+  border: none;
+  background-color: transparent;
+}
+
+#login-form .login-input::placeholder, .login-input, select, textarea {
+  color: $grey-one;
+}
+/*END LOGIN INPUT STYLES*/
+
+
+
+/*START LOGIN ICONS STYLES*/
+.login-icon {
+  border: none;
+  background-color: transparent;
+}
+
+.login-icon i {
+  color: $primary-gold-three;
+}
+
+#password-eye-icons {
+  cursor: pointer;
+}
+
+#password-eye-icons:hover > i {
+  color: $secondary-blue-one;
+}
+
+/*END LOGIN ICONS STYLES*/

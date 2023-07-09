@@ -13,6 +13,7 @@ import {Router} from "@angular/router";
 export class AuthComponent  {
   isLoginMode: boolean = true;
   showSpinner: boolean = false;
+  showPassword: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -21,6 +22,10 @@ export class AuthComponent  {
 
   switchLoginMode(): void {
     this.isLoginMode = !this.isLoginMode;
+  }
+
+  switchShowPasswordIcon() {
+    this.showPassword = !this.showPassword;
   }
 
   onSubmit(authForm: NgForm): void {

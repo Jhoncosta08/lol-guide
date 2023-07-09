@@ -1,26 +1,40 @@
 <div class="auth-container">
+
   <video [autoplay]="true" [muted]="true" loop id="myVideo">
     <source src="./assets/videos/diana.mp4" type="video/mp4">
   </video>
 
   <div class="content">
     <div class="login-container">
+
       <div class="login-title-container">
         <h2>{{ isLoginMode ? 'Login' : 'Sign up' }}</h2>
       </div>
 
-      <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-
+      <form #authForm="ngForm" id="login-form" (ngSubmit)="onSubmit(authForm)" autocomplete="off">
         <div class="form-group">
-          <input id="login-email" name="email" type="email" required placeholder="Email" ngModel/>
+          <div class="input-group mb-3 input-container">
+            <span class="input-group-text login-icon" id="email-icon"> <i class="bi bi-envelope"></i></span>
+            <input id="login-email" class="form-control login-input" name="email" type="email" required placeholder="Email" ngModel/>
+          </div>
         </div>
 
         <div class="form-group">
-          <input id="login-password" name="password" type="password" required  placeholder="Password" minlength="6" ngModel/>
+          <div class="input-group mb-3 input-container">
+            <span class="input-group-text login-icon" id="password-icon"><i class="bi bi-lock email-password-icon"></i></span>
+            <input id="login-password" class="form-control login-input" name="password" [type]="showPassword ? 'text' : 'password'" required  placeholder="Password" minlength="6" ngModel/>
+            <span class="input-group-text login-icon" id="password-eye-icons" (click)="switchShowPasswordIcon()">
+              <i *ngIf="!showPassword" class="bi bi-eye show-password-icon"></i>
+              <i *ngIf="showPassword" class="bi bi-eye-slash show-password-icon"></i>
+            </span>
+          </div>
+
+
+
+
         </div>
 
         <div class="form-group login-form-btn-container">
-
           <app-dynamic-button
             [buttonId]="'login-submit-btn'"
             [buttonType]="'submit'"
@@ -37,14 +51,11 @@
             [buttonText]="!isLoginMode ? 'switch to login' : 'switch to sign up'"
             [buttonDisable]="false">
           </app-dynamic-button>
-
         </div>
-        <a routerLink="/homepage">Back to homepage</a>
-
       </form>
+
     </div>
   </div>
-
 </div>
 
 
