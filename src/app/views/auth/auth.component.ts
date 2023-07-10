@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { NgForm } from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {AuthResponseData} from "../../interfaces/authResponseData";
@@ -45,7 +45,7 @@ export class AuthComponent  {
     authObs.subscribe({
       next: () => {
         this.showSpinner = false;
-        void this.router.navigate(['/champions']);
+        void this.router.navigate(['/dashboard']);
       },
       error: error => {
         alert(error);

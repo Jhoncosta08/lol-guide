@@ -1,6 +1,7 @@
 
 export const environment  = {
   production: false,
+  apiUrl: 'https://lol-guide-web-default-rtdb.firebaseio.com',
   firebase: {
     apiKey: "AIzaSyC6dpjsuf-E84ZGbrirfQVa4miNAKJSffw",
     authDomain: "lol-guide-web.firebaseapp.com",

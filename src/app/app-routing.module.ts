@@ -13,6 +13,11 @@ const routes: Routes = [
     loadChildren: () => import('./views/auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'dashboard',
+    loadChildren: () => import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'champions',
     loadChildren: () => import('./views/champions/champions.module').then((m) => m.ChampionsModule),
     canActivate: [AuthGuard]
