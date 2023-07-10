@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ChampionsRoutingModule } from './champions-routing.module';
 import { ChampionsComponent } from './champions.component';
+import {ChampionProfileModule} from "./champion-profile/champion-profile.module";
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ChampionsComponent } from './champions.component';
   ],
   imports: [
     CommonModule,
+    ChampionProfileModule,
     ChampionsRoutingModule
   ]
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -7,6 +7,7 @@ import {AuthService} from "../../services/auth.service";
   styleUrls: ['./header.component.scss', '.././css-effects/hover-effects.css']
 })
 export class HeaderComponent {
+  @Input() isAdminUser: boolean = false;
   constructor(private authService: AuthService) {}
 
   logout(): void {

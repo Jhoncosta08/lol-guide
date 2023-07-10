@@ -1,1 +1,14 @@
-<p>champion-profile works!</p>
+<div *ngIf="champTest && champTest.length >= 1" class="container">
+  <div *ngFor="let champ of champTest" class="test">
+    <p><img [src]="champ.championIcon" [alt]="champ.championName"/> --- {{ champ.championName }}</p>
+    <p>{{ champ.championTitle }}</p>
+    <img [src]="champ.championSplash" [alt]="champ.championName"/>
+    <p>{{ champ.championLore }}</p>
+  </div>
+</div>
+
+
+<div *ngIf="runeUrl" class="test">
+  <iframe [src]="runeUrl"></iframe>
+</div>
+

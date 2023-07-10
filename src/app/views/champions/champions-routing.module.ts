@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ChampionsComponent
   },
   {
-    path: ':name',
+    path: ':id',
     component: ChampionProfileComponent
   }
 ];

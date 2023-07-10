@@ -8,9 +8,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  isAdminUser: boolean = false
+  adminId: string = 'UbRHQT1O85RPvPmM4Zsoz4c7ba32';
   constructor(private authService: AuthService, public router: Router) {}
 
   ngOnInit(): void {
     this.authService.autoLogin();
+    this.authService.user.subscribe(user => {
+      if(user && user.id && user.id === this.adminId)  this.isAdminUser = true;
+    });
   }
 }

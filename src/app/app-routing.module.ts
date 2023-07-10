@@ -4,11 +4,6 @@ import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'login'
-  },
-  {
     path: 'login',
     loadChildren: () => import('./views/auth/auth.module').then((m) => m.AuthModule),
   },
@@ -30,6 +25,11 @@ const routes: Routes = [
   {
     path: 'items',
     loadChildren: () => import('./views/items/items.module').then((m) => m.ItemsModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./views/admin/admin.module').then((m) => m.AdminModule),
     canActivate: [AuthGuard]
   }
 ];
