@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {ChampionsComponent} from "./champions.component";
+import {ChampionProfileComponent} from "./champion-profile/champion-profile.component";
 
 const routes: Routes = [
   {
     path: '',
     component: ChampionsComponent
+  },
+  {
+    path: ':name',
+    component: ChampionProfileComponent
   }
 ];
 

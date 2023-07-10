@@ -1,0 +1,644 @@
+{
+  "componentChunkName":"component---src-contentstack-content-types-champions-templates-default-index-tsx",
+  "path":"/pt-br/champions/aatrox/",
+  "result":{
+    "data":{
+      "all":{
+        "nodes":[
+          {
+            "publish_details":{
+              "locale":"pt-br"
+            },
+            "uid":"bltf1c826326a26cd46",
+            "url":"/champions/aatrox/",
+            "data_dragon_id":"Aatrox",
+            "data_dragon_json":"{\"id\":\"Aatrox\",\"key\":\"266\",\"name\":\"Aatrox\",\"title\":\"a Espada Darkin\",\"image\":{\"full\":\"Aatrox.png\",\"sprite\":\"champion0.png\",\"group\":\"champion\",\"x\":0,\"y\":0,\"w\":48,\"h\":48},\"skins\":[{\"id\":\"266000\",\"num\":0,\"name\":\"default\",\"chromas\":false},{\"id\":\"266001\",\"num\":1,\"name\":\"Aatrox Justiceiro\",\"chromas\":false},{\"id\":\"266002\",\"num\":2,\"name\":\"Mech Aatrox\",\"chromas\":true},{\"id\":\"266003\",\"num\":3,\"name\":\"Aatrox Caçador dos Mares\",\"chromas\":false},{\"id\":\"266007\",\"num\":7,\"name\":\"Aatrox Lua Sangrenta\",\"chromas\":false},{\"id\":\"266008\",\"num\":8,\"name\":\"Aatrox Lua Sangrenta de Prestígio\",\"chromas\":false},{\"id\":\"266009\",\"num\":9,\"name\":\"Aatrox Vitorioso\",\"chromas\":true},{\"id\":\"266011\",\"num\":11,\"name\":\"Aatrox Odisseia\",\"chromas\":true},{\"id\":\"266020\",\"num\":20,\"name\":\"Aatrox Lua Sangrenta de Prestígio (2022)\",\"chromas\":false},{\"id\":\"266021\",\"num\":21,\"name\":\"Aatrox Eclipse Lunar\",\"chromas\":true},{\"id\":\"266030\",\"num\":30,\"name\":\"Aatrox DRX\",\"chromas\":true},{\"id\":\"266031\",\"num\":31,\"name\":\"Aatrox DRX de Prestígio\",\"chromas\":false}],\"lore\":\"Antes defensores honrados de Shurima contra o temido Vazio, Aatrox e seus irmãos acabaram se tornando uma ameaça ainda maior para Runeterra, e a única coisa capaz de derrotá-los foi um tipo de feitiçaria mortal e traiçoeira. Mas após séculos de encarceramento, Aatrox foi o primeiro a encontrar a liberdade novamente, e ele saiu corrompendo e transformando quem fosse tolo o suficiente de tentar tocar na arma mágica que continha sua essência. Agora, com um corpo roubado, ele vaga por Runeterra transfigurado, em uma versão bizarra da sua forma anterior, buscando uma vingança apocalíptica.\",\"blurb\":\"Antes defensores honrados de Shurima contra o temido Vazio, Aatrox e seus irmãos acabaram se tornando uma ameaça ainda maior para Runeterra, e a única coisa capaz de derrotá-los foi um tipo de feitiçaria mortal e traiçoeira. Mas após séculos de...\",\"allytips\":[\"Use Avanço Umbral quando conjurar A Espada Darkin para aumentar suas chances de acertar um inimigo.\",\"Habilidades de Controle de Grupo, como Correntes Infernais ou efeitos de imobilização vindos dos seus aliados, ajudarão a preparar tudo para A Espada Darkin.\",\"Conjure Aniquilador de Mundos quando tiver certeza que pode forçar uma luta.\"],\"enemytips\":[\"Os ataques de Aatrox são bem indicados, então use o tempo de seus movimentos para escapar das zonas de acerto dele.\",\"É mais fácil sair das Correntes Infernais de Aatrox se você correr para os lados ou na direção dele.\",\"Mantenha distância quando Aatrox usar sua ultimate para evitar que ele reviva.\"],\"tags\":[\"Fighter\",\"Tank\"],\"partype\":\"Poço de Sangue\",\"info\":{\"attack\":8,\"defense\":4,\"magic\":3,\"difficulty\":4},\"stats\":{\"hp\":650,\"hpperlevel\":114,\"mp\":0,\"mpperlevel\":0,\"movespeed\":345,\"armor\":38,\"armorperlevel\":4.45,\"spellblock\":32,\"spellblockperlevel\":2.05,\"attackrange\":175,\"hpregen\":3,\"hpregenperlevel\":1,\"mpregen\":0,\"mpregenperlevel\":0,\"crit\":0,\"critperlevel\":0,\"attackdamage\":60,\"attackdamageperlevel\":5,\"attackspeedperlevel\":2.5,\"attackspeed\":0.651},\"spells\":[{\"id\":\"AatroxQ\",\"name\":\"A Espada Darkin\",\"description\":\"Aatrox bate sua espada no chão, causando Dano Físico. Ele pode bater até três vezes, cada vez em uma área de ação diferente.\",\"tooltip\":\"Aatrox bate com sua espada no chão, causando <physicalDamage>{{ qdamage }} de Dano Físico</physicalDamage>. Inimigos atingidos na área exterior são <status>Arremessados ao ar</status> brevemente e sofrem <physicalDamage>{{ qedgedamage }} de Dano Físico</physicalDamage>. A Habilidade pode ser <recast>Reconjurada</recast> duas vezes, alterando o formato do golpe e causando 25% de dano a mais do que o golpe anterior.{{ spellmodifierdescriptionappend }}\",\"leveltip\":{\"label\":[\"Tempo de Recarga\",\"Dano\",\"Multiplicador de DdA total\"],\"effect\":[\"{{ cooldown }} -> {{ cooldownNL }}\",\"{{ qbasedamage }} -> {{ qbasedamageNL }}\",\"{{ qtotaladratio*100.000000 }}% -> {{ qtotaladrationl*100.000000 }}%\"]},\"maxrank\":5,\"cooldown\":[14,12,10,8,6],\"cooldownBurn\":\"14/12/10/8/6\",\"cost\":[0,0,0,0,0],\"costBurn\":\"0\",\"datavalues\":{},\"effect\":[null,[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],\"effectBurn\":[null,\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"],\"vars\":[],\"costType\":\"Sem custo\",\"maxammo\":\"-1\",\"range\":[25000,25000,25000,25000,25000],\"rangeBurn\":\"25000\",\"image\":{\"full\":\"AatroxQ.png\",\"sprite\":\"spell0.png\",\"group\":\"spell\",\"x\":288,\"y\":48,\"w\":48,\"h\":48},\"resource\":\"Sem custo\"},{\"id\":\"AatroxW\",\"name\":\"Correntes Infernais\",\"description\":\"Aatrox bate no chão, causando dano ao primeiro inimigo atingido. Campeões e Monstros Grandes precisam sair da área de impacto rapidamente ou serão arrastados para o centro e receberão dano novamente.\",\"tooltip\":\"Aatrox arremessa uma corrente, causando ao primeiro inimigo atingido {{ wslowpercentage*-100 }}% de <status>Lentidão</status> por {{ wslowduration }}s e <physicalDamage>{{ wdamage }} de Dano Físico</physicalDamage>. Campeões e monstros grandes da selva devem sair da área de impacto em até {{ wslowduration }}s ou serão <status>Puxados</status> de volta ao centro, sofrendo o mesmo dano novamente.{{ spellmodifierdescriptionappend }}\",\"leveltip\":{\"label\":[\"Tempo de Recarga\",\"Dano\",\"Redução de velocidade\"],\"effect\":[\"{{ cooldown }} -> {{ cooldownNL }}\",\"{{ wbasedamage }} -> {{ wbasedamageNL }}\",\"{{ wslowpercentage*-100.000000 }}% -> {{ wslowpercentagenl*-100.000000 }}%\"]},\"maxrank\":5,\"cooldown\":[20,18,16,14,12],\"cooldownBurn\":\"20/18/16/14/12\",\"cost\":[0,0,0,0,0],\"costBurn\":\"0\",\"datavalues\":{},\"effect\":[null,[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],\"effectBurn\":[null,\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"],\"vars\":[],\"costType\":\"Sem custo\",\"maxammo\":\"-1\",\"range\":[825,825,825,825,825],\"rangeBurn\":\"825\",\"image\":{\"full\":\"AatroxW.png\",\"sprite\":\"spell0.png\",\"group\":\"spell\",\"x\":336,\"y\":48,\"w\":48,\"h\":48},\"resource\":\"Sem custo\"},{\"id\":\"AatroxE\",\"name\":\"Avanço Umbral\",\"description\":\"Passivamente, Aatrox se cura quando causa dano a Campeões inimigos. Quando ativado, ele avança em uma direção.\",\"tooltip\":\"<spellPassive>Passivo:</spellPassive> Aatrox recebe <lifeSteal>{{ espellvamp }}% de Vampirismo Universal</lifeSteal> contra Campeões, aumentando para <lifeSteal>{{ espellvampempowered }}% de Vampirismo Universal</lifeSteal> durante <keywordMajor>Aniquilador de Mundos</keywordMajor>.<br /><br /><spellActive>Ativo:</spellActive> Aatrox avança. Ele pode usar essa Habilidade durante as animações das outras Habilidades.{{ spellmodifierdescriptionappend }}\",\"leveltip\":{\"label\":[\"Tempo de Recarga\",\"Porcentagem de cura\",\"Porcentagem de cura durante Aniquilador de Mundos\"],\"effect\":[\"{{ cooldown }} -> {{ cooldownNL }}\",\"{{ espellvamp }}% -> {{ espellvampNL }}%\",\"{{ espellvampempowered }}% -> {{ espellvampempoweredNL }}%\"]},\"maxrank\":5,\"cooldown\":[9,8,7,6,5],\"cooldownBurn\":\"9/8/7/6/5\",\"cost\":[0,0,0,0,0],\"costBurn\":\"0\",\"datavalues\":{},\"effect\":[null,[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],\"effectBurn\":[null,\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"],\"vars\":[],\"costType\":\"Sem custo\",\"maxammo\":\"1\",\"range\":[25000,25000,25000,25000,25000],\"rangeBurn\":\"25000\",\"image\":{\"full\":\"AatroxE.png\",\"sprite\":\"spell0.png\",\"group\":\"spell\",\"x\":384,\"y\":48,\"w\":48,\"h\":48},\"resource\":\"Sem custo\"},{\"id\":\"AatroxR\",\"name\":\"Aniquilador de Mundos\",\"description\":\"Aatrox libera sua forma demoníaca, aterrorizando tropas inimigas próximas, ganhando Dano de Ataque, cura aumentada e Velocidade de Movimento. Se ele conseguir um abate, este efeito é estendido.\",\"tooltip\":\"Aatrox revela sua verdadeira forma demoníaca, causando <status>Temor</status> às tropas próximas por {{ rminionfearduration }}s e recebendo <speed>{{ rmovementspeedbonus*100 }}% de Velocidade de Movimento</speed> que decai ao longo de {{ rduration }}s. Ele também recebe <scaleAD>{{ rtotaladamp*100 }}% de Dano de Ataque</scaleAD> e aumenta a <healing>própria cura em {{ rhealingamp*100 }}%</healing> ao longo da duração.<br /><br />Eliminar Campeões aumenta a duração desse efeito em {{ rextension }}s e redefine o aumento de <speed>Velocidade de Movimento</speed>.{{ spellmodifierdescriptionappend }}\",\"leveltip\":{\"label\":[\"Dano de Ataque total aumentado\",\"Aumento de cura\",\"Velocidade de Movimento\",\"Tempo de Recarga\"],\"effect\":[\"{{ rtotaladamp*100.000000 }}% -> {{ rtotaladampnl*100.000000 }}%\",\"{{ rhealingamp*100.000000 }}% -> {{ rhealingampnl*100.000000 }}%\",\"{{ rmovementspeedbonus*100.000000 }}% -> {{ rmovementspeedbonusnl*100.000000 }}%\",\"{{ cooldown }} -> {{ cooldownNL }}\"]},\"maxrank\":3,\"cooldown\":[120,100,80],\"cooldownBurn\":\"120/100/80\",\"cost\":[0,0,0],\"costBurn\":\"0\",\"datavalues\":{},\"effect\":[null,[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],\"effectBurn\":[null,\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\",\"0\"],\"vars\":[],\"costType\":\"Sem custo\",\"maxammo\":\"-1\",\"range\":[25000,25000,25000],\"rangeBurn\":\"25000\",\"image\":{\"full\":\"AatroxR.png\",\"sprite\":\"spell0.png\",\"group\":\"spell\",\"x\":432,\"y\":48,\"w\":48,\"h\":48},\"resource\":\"Sem custo\"}],\"passive\":{\"name\":\"Postura do Arauto da Morte\",\"description\":\"Periodicamente, o próximo ataque básico de Aatrox causa <physicalDamage>Dano Físico</physicalDamage> adicional e o cura com base na Vida máxima do alvo. \",\"image\":{\"full\":\"Aatrox_Passive.png\",\"sprite\":\"passive0.png\",\"group\":\"passive\",\"x\":0,\"y\":0,\"w\":48,\"h\":48}},\"recommended\":[]}",
+            "champion_blurb":"Antes defensores honrados de Shurima contra o temido Vazio, Aatrox e seus irmãos acabaram se tornando uma ameaça ainda maior para Runeterra, e a única coisa capaz de derrotá-los foi um tipo de feitiçaria mortal e traiçoeira. Mas após séculos de...",
+            "lore":"Antes defensores honrados de Shurima contra o temido Vazio, Aatrox e seus irmãos acabaram se tornando uma ameaça ainda maior para Runeterra, e a única coisa capaz de derrotá-los foi um tipo de feitiçaria mortal e traiçoeira. Mas após séculos de encarceramento, Aatrox foi o primeiro a encontrar a liberdade novamente, e ele saiu corrompendo e transformando quem fosse tolo o suficiente de tentar tocar na arma mágica que continha sua essência. Agora, com um corpo roubado, ele vaga por Runeterra transfigurado, em uma versão bizarra da sua forma anterior, buscando uma vingança apocalíptica.",
+            "champion_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/champion/Aatrox.png",
+            "champion_name":"Aatrox",
+            "champion_splash":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+            "champion_title":"a Espada Darkin",
+            "recommended_lanes":[
+
+            ],
+            "recommended_roles":[
+              "Fighter",
+              "Tank"
+            ],
+            "links":[
+              {
+                "href":"https://www.leagueofgraphs.com/pt/champions/builds/aatrox",
+                "title":"LeagueofGraphs.com"
+              },
+              {
+                "href":"https://br.op.gg/champion/Aatrox/statistics/mid",
+                "title":"OP.GG"
+              },
+              {
+                "href":"https://www.probuilds.net/champions/details/Aatrox",
+                "title":"probuilds.net"
+              }
+            ],
+            "champion":{
+              "modular_blocks":[
+
+              ]
+            },
+            "skins":[
+              {
+                "name":"default",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg"
+              },
+              {
+                "name":"Aatrox Justiceiro",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_1.jpg"
+              },
+              {
+                "name":"Mech Aatrox",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_2.jpg"
+              },
+              {
+                "name":"Aatrox Caçador dos Mares",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_3.jpg"
+              },
+              {
+                "name":"Aatrox Lua Sangrenta",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_7.jpg"
+              },
+              {
+                "name":"Aatrox Lua Sangrenta de Prestígio",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_8.jpg"
+              },
+              {
+                "name":"Aatrox Vitorioso",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_9.jpg"
+              },
+              {
+                "name":"Aatrox Odisseia",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_11.jpg"
+              },
+              {
+                "name":"Aatrox Lua Sangrenta de Prestígio (2022)",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_20.jpg"
+              },
+              {
+                "name":"Aatrox Eclipse Lunar",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_21.jpg"
+              },
+              {
+                "name":"Aatrox DRX",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_30.jpg"
+              },
+              {
+                "name":"Aatrox DRX de Prestígio",
+                "imageUrl":"https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_31.jpg"
+              }
+            ],
+            "champion_passive":{
+              "champion_passive_description":"Periodicamente, o próximo ataque básico de Aatrox causa Dano Físico adicional e o cura com base na Vida máxima do alvo. ",
+              "champion_passive_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/passive/Aatrox_Passive.png",
+              "champion_passive_name":"Postura do Arauto da Morte",
+              "champion_passive_video_mp4":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.mp4",
+              "champion_passive_video_poster":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.jpg",
+              "champion_passive_video_webm":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_P1.webm"
+            },
+            "champion_q":{
+              "champion_q_description":"Aatrox bate sua espada no chão, causando Dano Físico. Ele pode bater até três vezes, cada vez em uma área de ação diferente.",
+              "champion_q_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/AatroxQ.png",
+              "champion_q_name":"A Espada Darkin",
+              "champion_q_video_mp4":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.mp4",
+              "champion_q_video_poster":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.jpg",
+              "champion_q_video_webm":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_Q1.webm"
+            },
+            "champion_w":{
+              "champion_w_description":"Aatrox bate no chão, causando dano ao primeiro inimigo atingido. Campeões e Monstros Grandes precisam sair da área de impacto rapidamente ou serão arrastados para o centro e receberão dano novamente.",
+              "champion_w_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/AatroxW.png",
+              "champion_w_name":"Correntes Infernais",
+              "champion_w_video_mp4":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.mp4",
+              "champion_w_video_poster":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.jpg",
+              "champion_w_video_webm":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_W1.webm"
+            },
+            "champion_e":{
+              "champion_e_description":"Passivamente, Aatrox se cura quando causa dano a Campeões inimigos. Quando ativado, ele avança em uma direção.",
+              "champion_e_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/AatroxE.png",
+              "champion_e_name":"Avanço Umbral",
+              "champion_e_video_mp4":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.mp4",
+              "champion_e_video_poster":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.jpg",
+              "champion_e_video_webm":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_E1.webm"
+            },
+            "champion_r":{
+              "champion_r_description":"Aatrox libera sua forma demoníaca, aterrorizando tropas inimigas próximas, ganhando Dano de Ataque, cura aumentada e Velocidade de Movimento. Se ele conseguir um abate, este efeito é estendido.",
+              "champion_r_icon":"https://ddragon.leagueoflegends.com/cdn/13.13.1/img/spell/AatroxR.png",
+              "champion_r_name":"Aniquilador de Mundos",
+              "champion_r_video_mp4":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.mp4",
+              "champion_r_video_poster":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.jpg",
+              "champion_r_video_webm":"https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0266/ability_0266_R1.webm"
+            },
+            "related_champions":[
+
+            ]
+          }
+        ]
+      },
+      "configuration":{
+        "edges":[
+          {
+            "node":{
+              "league_friends_app":{
+                "app_store_download_url":"https://apps.apple.com/br/app/league-of-legends-friends/id1077150310?ls=1",
+                "google_play_download_url":"https://play.google.com/store/apps/details?id=com.riotgames.mobile.leagueconnect&hl=br"
+              },
+              "pages":{
+                "champion_list":[
+                  {
+                    "url":{
+                      "url":"/champions/"
+                    }
+                  }
+                ]
+              },
+              "champions":{
+                "footer_videos":[
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbb792e3456cb02b7/5f4959269586f1653fc65a1b/ss2020_urgot_vi_cait_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Urgot -Vi - Cait"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfa2accf67922dd3a/5f495972a11538653ea58f65/ss2020_lux_sylas_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Sylas - Lux"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt755ed452ae53c9a2/5f49597270ca0f65ba10a439/ss2020_sylas_garen_lux_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Sylas - Garen - Lux"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/bltfa2accf67922dd3a/5f495972a11538653ea58f65/ss2020_lux_sylas_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Lux - Sylas"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt441f3bc092c69d44/5f49597070ca0f65ba10a435/ss2020_kaisa_ez_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Kaisa - Ezreal"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blte5d5ac96b514d502/5f495971a21dbd47faf26c0b/ss2020_kaisa_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Kaisa"
+                  },
+                  {
+                    "video":[
+                      {
+                        "video":{
+                          "file":{
+                            "url":"https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7de86c03defc8902/5f4959882ecc864927d8d392/ss2020_galio_lux_1920x1080.mp4",
+                            "content_type":"video/mp4"
+                          },
+                          "height":1080,
+                          "width":1920
+                        }
+                      }
+                    ],
+                    "title":"Galio - Lux"
+                  }
+                ]
+              },
+              "urls":{
+                "game_download":"https://signup.br.leagueoflegends.com/pt/signup/index#/"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pageContext":{
+      "language":"pt-br",
+      "url":"/champions/aatrox/",
+      "googleOptimizeContainerID":"",
+      "contentstackLanguage":"pt-br",
+      "intl":{
+        "language":"pt-br",
+        "languages":[
+          "pt-br"
+        ],
+        "messages":{
+          "abilities-spells-and-items.title":"Habilidades, feitiços e itens",
+          "abilities.description":"A maioria dos Campeões tem kits diferentes e únicos, compostos de cinco habilidades: uma [Passiva](tooltip:passive-ability), três [Básicas](tooltip:basic-abilities) e uma [Ultimate](tooltip:ultimate-ability). Essas habilidades estão associadas às teclas Q, W, E e R.",
+          "abilities.title":"Habilidades",
+          "about-the-game.title":"Sobre o jogo",
+          "about.title":"Sobre",
+          "all.title":"Todos",
+          "assassins.description":"Assassinos são combatentes corpo a corpo altamente ágeis que podem eliminar rapidamente seus oponentes. Suas baixas defesas os obrigam a abater seus alvos com precisão para não correrem o risco de serem neutralizados.",
+          "assassins.title":"Assassinos",
+          "author.title.plural":"Jogadores",
+          "author.title.singular":"Autor",
+          "available-skins.title":"Skins disponíveis",
+          "basic-abilities.description":"As habilidades básicas do seu Campeão estão associadas às teclas Q, W, E, e podem subir de nível ao longo da partida. Algumas custam Mana para serem conjuradas ou possuem um período de Tempo de Recarga.",
+          "basic-abilities.title":"Habilidades básicas",
+          "categories.title":"Categorias",
+          "category.game-updates.name":"Atualizações do jogo",
+          "category.patch-notes.name":"Notas das Atualizações",
+          "category.esports.name":"Esports",
+          "category.dev.name":"/dev",
+          "category.lore.name":"História",
+          "category.media.name":"Mídia",
+          "category.merch.name":"Produtos",
+          "category.community.name":"Comunidade",
+          "category.riot-games.name":"Riot Games",
+          "champion-ability.e.title":"E",
+          "champion-ability.passive.title":"Passiva",
+          "champion-ability.q.title":"Q",
+          "champion-ability.r.title":"R",
+          "champion-ability.w.title":"W",
+          "champion-ability.no-video.title":"Não é possível exibir esta habilidade em vídeo",
+          "champion-difficulty.all-difficulties":"Todas as dificuldades",
+          "champion-difficulty.ranking.high":"Alta",
+          "champion-difficulty.ranking.low":"Baixa",
+          "champion-difficulty.ranking.medium":"Moderado",
+          "champion-difficulty.title":"Dificuldade",
+          "champion-lane.bottom.title":"Rota inferior",
+          "champion-lane.bottom.title.short":"Rota inferior",
+          "champion-lane.jungle.title":"Selva",
+          "champion-lane.middle.title":"Rota do meio",
+          "champion-lane.middle.title.short":"Meio",
+          "champion-lane.top.title":"Rota superior",
+          "champion-list.filter-result.no-champions-found":"Nenhum Campeão corresponde ao critério do filtro.",
+          "champion-list.title":"Lista de Campeões",
+          "champion-mastery.title":"Maestria de Campeão",
+          "champion-role.all.long":"Todas as funções",
+          "champion-role.all.short":"Todos",
+          "champion-role.assassin.plural":"Assassinos",
+          "champion-role.assassin.singular":"Assassino",
+          "champion-role.fighter.plural":"Lutadores",
+          "champion-role.fighter.singular":"Lutador",
+          "champion-role.mage.plural":"Magos",
+          "champion-role.mage.singular":"Mago",
+          "champion-role.marksman.plural":"Atiradores",
+          "champion-role.marksman.singular":"Atirador",
+          "champion-role.support.plural":"Suportes",
+          "champion-role.support.singular":"Suporte",
+          "champion-role.tank.plural":"Tanques",
+          "champion-role.tank.singular":"Tanque",
+          "champion-role.title":"Função",
+          "champion-skins.title":"Skins de Campeão",
+          "champion.ahri.description":"Ahri supera seus inimigos com avanços e surtos de Velocidade de Movimento. Sua fascinante magia atrai os inimigos para perto, deixando-os vulneráveis e deslocados.",
+          "champion.ahri.name":"Ahri",
+          "champion.ahri.title":"A Raposa de Nove Caudas",
+          "champion.akali.name":"Akali",
+          "champion.akali.title":"A Assassina Renegada",
+          "champion.brand.description":"Brand incinera os inimigos com combos inflamáveis. Suas chamas queimam os inimigos ao longo do tempo e acendem labaredas gigantescas que causam dano mortal.",
+          "champion.brand.name":"Brand",
+          "champion.brand.title":"A Vingança Flamejante",
+          "champion.braum.name":"Braum",
+          "champion.braum.title":"O Coração de Freljord",
+          "champion.chogath.name":"Cho'Gath",
+          "champion.chogath.title":"O Terror do Vazio",
+          "champion.darius.description":"Darius dizima seus inimigos com uma brutalidade sem fim. Ele corta vários inimigos de uma só vez, depois os executa um por um.",
+          "champion.darius.name":"Darius",
+          "champion.darius.title":"A Mão de Noxus",
+          "champion.ekko.description":"Ekko brinca com o tempo e batalha ao redor de seus inimigos. Ele pode retroceder até uma localização anterior para escapar ou para voltar para a batalha bruscamente.",
+          "champion.ekko.name":"Ekko",
+          "champion.ekko.title":"O Rapaz que Estilhaçou o Tempo",
+          "champion.garen.description":"Garen acerta vários inimigos de uma vez girando sua enorme espada. Ele distribui justiça invocando do céu uma poderosa lâmina que executa seus inimigos.",
+          "champion.garen.name":"Garen",
+          "champion.garen.title":"O Poder de Demacia",
+          "champion.jinx.name":"Jinx",
+          "champion.jinx.title":"O Gatilho Desenfreado",
+          "champion.leona.name":"Leona",
+          "champion.leona.title":"A Alvorada Radiante",
+          "champion.lux.description":"Lux ilumina seus inimigos de longe, prendendo-os onde estão para entrançar ataques brilhantes. Sua explosão de dano termina com seu gigantesco raio laser.",
+          "champion.lux.name":"Lux",
+          "champion.lux.title":"A Dama da Luz",
+          "champion.masteryi.description":"Master Yi golpeia rápido e incessantemente. Ele salta pelo campo de batalha para cortar seus alvos ou para desviar agilmente de um contra-ataque inimigo.",
+          "champion.masteryi.name":"Master Yi",
+          "champion.masteryi.title":"O Espadachim Wuju",
+          "champion.missfortune.description":"Miss Fortune afoga seus inimigos em uma onda de ataques que mais parecem tiros de canhão. Ela pode disparar um único tiro ou descarregar uma chuva de balas em um confronto de equipe.",
+          "champion.missfortune.name":"Miss Fortune",
+          "champion.missfortune.title":"A Caçadora de Recompensas",
+          "champion.sona.description":"Sona toca uma fascinante sinfonia, trocando de melodias para fortalecer aliados ou controlar inimigos. Seu incrível Crescendo pode deixar toda a equipe inimiga atordoada.",
+          "champion.sona.name":"Sona",
+          "champion.sona.title":"A Mestra das Cordas",
+          "champion.thresh.name":"Thresh",
+          "champion.thresh.title":"O Guardião das Correntes",
+          "champion.tristana.description":"As cargas explosivas de Tristana destroem torres em tempo recorde. Ela se lança para dentro e para fora do combate como um foguete, reiniciando a habilidade toda vez que explode um inimigo. ",
+          "champion.tristana.name":"Tristana",
+          "champion.tristana.title":"A Artilheira Yordle",
+          "champion.warwick.name":"Warwick",
+          "champion.warwick.title":"A Ira Desimpedida de Zaun",
+          "champion.yasuo.name":"Yasuo",
+          "champion.yasuo.title":"O Imperdoável",
+          "champions.title":"Campeões",
+          "close.action":"Fechar",
+          "cloud-drake.description":"O Dragão das Nuvens concede Redução do Tempo de Recarga pelo resto da partida para a equipe que o derrotar. Quando o mapa está dominado por ele, novas zonas de aumento de Velocidade de Movimento aparecem na selva.",
+          "cloud-drake.title":"Dragão das Nuvens",
+          "copy-link.action":"Copiar link",
+          "day-1.title":"Dia 1",
+          "day-2.title":"Dia 2",
+          "day-3.title":"Dia 3",
+          "day-4.title":"Dia 4",
+          "day-5.title":"Dia 5",
+          "day-6.title":"Dia 6",
+          "day-7.title":"Dia 7",
+          "discord.title":"Discord",
+          "discover-champions.action":"Descubra Campeões",
+          "discover-more-champions.action":"Descubra mais Campeões",
+          "download-on-app-store.action":"Baixe na App Store",
+          "earn-experience.title":"Ganhe experiência",
+          "earn-gold.title":"Ganhe ouro",
+          "elder-dragon.description":"O Dragão Ancião surge sempre que três Dragões Elementais iguais forem abatidos. Ele concede queimação de Dano Verdadeiro ao longo do tempo e a capacidade de abater instantaneamente oponentes abaixo de certa quantidade de Vida para a equipe que o derrotar.",
+          "elder-dragon.title":"Dragão Ancião",
+          "error-page.header":"Erro 404",
+          "error-page.description":"A página que você procurou não foi encontrada.",
+          "esports-and-more.title":"Esports e mais",
+          "exit-full-screen.action":"Sair do modo tela cheia",
+          "facebook.title":"Facebook",
+          "featured-news.title":"Destaques",
+          "fighters.description":"Lutadores são combatentes de curto alcance especializados em causar e aguentar dano. Eles são fracos contra Campeões de longo alcance, com Controle de Grupo ou mobilidade.",
+          "fighters.title":"Lutadores",
+          "flash.description":"Flash instantaneamente transporta seu Campeão por uma curta distância quando ativado. Ele pode ser usado para esquivar de ataques mortais ou para perseguir um abate.",
+          "flash.title":"Flash",
+          "fog-of-war.description":"A Névoa de Guerra cobre todo o mapa, limitando o campo de visão da sua equipe. Recursos como torres, tropas e sentinelas são cruciais para manter a visão.",
+          "fog-of-war.title":"Névoa de Guerra",
+          "fountain.description":"A fonte é onde os Campeões surgem pela primeira vez, ressurgem após morrerem e onde aparecem quando usam Retorno. Essa área também protege a equipe correspondente causando muito dano a qualquer inimigo que se aproximar.",
+          "fountain.title":"Fonte",
+          "full-screen.action":"Tela cheia",
+          "gallery.title":"Galeria",
+          "game-mode.aram.description":"Em uma ponte congelante, batalhe com sua equipe de Campeões aleatórios avançando em direção ao Nexus inimigo nesse divertido e caótico modo de jogo 5v5.",
+          "game-mode.aram.headline":"Todos aleatórios na rota do meio",
+          "game-mode.aram.name":"ARAM",
+          "game-mode.summoners-rift.description":"Limpe sua rota, mergulhe em épicos confrontos de equipe 5v5 e destrua o Nexus inimigo antes que destruam o seu.",
+          "game-mode.summoners-rift.headline":"O modo de jogo mais jogado",
+          "game-mode.summoners-rift.name":"Summoner's Rift",
+          "game-mode.team-fight-tactics.description":"Monte uma equipe de Campeões para batalhar em seu nome. Derrote os sete oponentes e sobreviva por mais tempo.",
+          "game-mode.team-fight-tactics.headline":"Uma guerra todos contra todos em busca da supremacia",
+          "game-mode.team-fight-tactics.name":"Teamfight Tactics",
+          "game-modes.title":"Modos de jogo",
+          "get-on-google-play.action":"Obtenha no Google Play",
+          "get-started.action":"Começar",
+          "goal.title":"Objetivo",
+          "highlights.title":"Destaques",
+          "how-to-play.title":"Como jogar",
+          "ignite.description":"Incendiar causa Dano Verdadeiro ao longo do tempo em Campeões inimigos.",
+          "ignite.title":"Incendiar",
+          "infernal-drake.description":"O Dragão Infernal concede Dano de Ataque ou Poder de Habilidade e Armadura ou Penetração Mágica pelo resto da partida para a equipe que o derrotar. Quando o mapa está dominado por ele, novos caminhos aparecem na selva.",
+          "infernal-drake.title":"Dragão Infernal",
+          "instagram.title":"Instagram",
+          "items.description":"Itens melhoram a performance do seu Campeão concedendo fortalecimentos como maior velocidade, dano aprimorado e redução dos Tempos de Recarga das habilidades. Ao contrário dos [Amuletos](tooltip:trinkets), eles custam ouro para serem comprados.",
+          "items.title":"Itens",
+          "lane-positions.title":"Posições nas rotas",
+          "latest-news.title":"Notícias mais recentes",
+          "league-of-legends.title":"League of Legends",
+          "lets-go.action":"Vamos lá",
+          "level-1.title":"Nível 1",
+          "level-10.title":"Nível 10",
+          "level-2.title":"Nível 2",
+          "level-3.title":"Nível 3",
+          "level-4.title":"Nível 4",
+          "level-5.title":"Nível 5",
+          "level-6.title":"Nível 6",
+          "level-7.title":"Nível 7",
+          "level-8.title":"Nível 8",
+          "level-9.title":"Nível 9",
+          "level-up-from-basics.action":"Suba de nível e saia do básico",
+          "level-up.action":"Recompensas ao subir de nível",
+          "linkedin.title":"LinkedIn",
+          "load-more.action":"Carregar mais",
+          "login.action":"Login",
+          "login-rewards.action":"Recompensas de Login",
+          "mages.description":"Magos normalmente são combatentes de longo alcance especializados em Controle de Grupo, dano em área de ação e dano explosivo. Eles são vulneráveis contra Campeões de alta mobilidade e que conseguem anulá-los.",
+          "mages.title":"Magos",
+          "marksmen.description":"Atiradores são combatentes de ataque à distância que dependem de Velocidade de Ataque para causarem muito dano conforme escalam na partida. Eles são vulneráveis contra dano explosivo e tendem a ser mais fracos no início de jogo.",
+          "marksmen.title":"Atiradores",
+          "message.copied-to-clipboard":"Copiado para a área de transferência",
+          "minions.description":"Tropas são unidades de combate que avançam em uma rota e atacam automaticamente qualquer unidade ou estrutura inimiga no caminho. Elas podem ser combatentes, conjuradoras ou de cerco.",
+          "minions.title":"Tropas",
+          "most-played.title":"Mais jogados",
+          "most-popular.title":"Mais populares",
+          "mountain-drake.description":"O Dragão da Montanha concede dano adicional contra o Barão, dragões, torres e inibidores pelo resto da partida para a equipe que o derrotar. Quando o mapa está dominado por ele, novas paredes aparecem na selva.",
+          "mountain-drake.title":"Dragão da Montanha",
+          "neutral-monsters.title":"Monstros neutros",
+          "next.action":"Próximo",
+          "number-of-images.title.icu":"{images, plural, one {1 image} other {# images}}",
+          "ocean-drake.description":"O Dragão do Oceano concede Regeneração de Vida e Mana pelo resto da partida para a equipe que o derrotar. Quando o mapa está dominado por ele, novas plantas de cura e arbustos maiores, para furtividade e perseguições, aparecem na selva.",
+          "ocean-drake.title":"Dragão do Oceano",
+          "open.action":"Abrir",
+          "overview.title":"Visão geral",
+          "passive-ability.description":"A habilidade passiva do seu Campeão concede efeitos únicos e algumas exigem que uma condição seja atendida. Ao contrário das outras habilidades, ela está disponível logo no começo da partida e não pode subir de nível.",
+          "passive-ability.title":"Habilidade passiva",
+          "play-for-free.action":"Jogue de graça",
+          "play-now.action":"Jogar agora",
+          "playback.mute.action":"Silenciar",
+          "playback.pause.action":"Pausar",
+          "playback.play.action":"Reproduzir",
+          "playback.playback-progress.title":"Progresso da reprodução",
+          "playback.time-remaining-with-time.title":"Tempo restante: %time%",
+          "playback.unmute.action":"Deixar de silenciar",
+          "player-resources-guide.title":"Guia de recursos do jogador",
+          "powering-up.title":"Ficando mais forte",
+          "previous.action":"Anterior",
+          "quotation-mark.open":"\"",
+          "quotation-mark.close":"\"",
+          "reddit.title":"Reddit",
+          "related-champions.title":"Campeões relacionados",
+          "related.title":"Artigos relacionados",
+          "rewards.day-1.description":"\nUm Campeão [Atirador](tooltip:marksmen) de sua escolha: Tristana, Caitlyn ou Ezreal\nUm bônus de EXP de 3 dias + Baú Hextec",
+          "rewards.day-2.description":"Um Campeão [Lutador](tooltip:fighters) de sua escolha: Illaoi, Riven ou Garen\n1 Chave Hextec (na forma de 3 fragmentos para criação)",
+          "rewards.day-3.description":"Um Campeão [Mago](tooltip:mages) de sua escolha: Brand, Morgana ou Ziggs\n1 Baú Hextec",
+          "rewards.day-4.description":"Um Campeão [Suporte](tooltip:supports) de sua escolha: Sona, Thresh ou Nami\n1 Chave Hextec",
+          "rewards.day-5.description":"Um Campeão [Assassino](tooltip:assassins) de sua escolha: Ekko, Fizz ou Talon\n1 Baú Hextec",
+          "rewards.day-6.description":"6300 Essências Azuis",
+          "rewards.day-7.description":"Fragmento de Skin Miss Fortune de Waterloo\n500 Essências Laranja",
+          "rewards.level-1.description":"Habilita os Feitiços de Invocador Fantasma e Curar",
+          "rewards.level-10.description":"Habilita 1 página de runas\nHabilita o modo de jogo Summoner's Rift (Normal, Escolha Alternada)\n900 Essências Azuis",
+          "rewards.level-2.description":"Habilita o Modo de Treino\nCampeão do tutorial (de sua escolha) e ícone\n450 Essências Azuis",
+          "rewards.level-3.description":"Habilita o modo de jogo Summoner's Rift (Normal, Escolha às Cegas)\nHabilita o modo de jogo ARAM\n450 Essências Azuis",
+          "rewards.level-4.description":"Habilita os Feitiços de Invocador Barreira e Exaustão\n450 Essências Azuis",
+          "rewards.level-5.description":"Habilite o modo de jogo Coop. vs. IA\nEmote Amigo Poro\n450 Essências Azuis",
+          "rewards.level-6.description":"Habilita os Feitiços de Invocador Clareza, Marca e Avanço\n900 Essências Azuis",
+          "rewards.level-7.description":"Habilite os Feitiços de Invocador Flash e Teleporte\n900 Essências Azuis",
+          "rewards.level-8.description":"Habilita 1 skin de sentinela permanente aleatória\n900 Essências Azuis",
+          "rewards.level-9.description":"Habilita os Feitiços de Invocador Purificar, Incendiar e Golpear\n900 Essências Azuis",
+          "rewards.title":"Recompensas",
+          "search.action":"Buscar",
+          "search.message.no-champions-found":"Nenhum Campeão encontrado.",
+          "section.champion-explorer.heading":"Conheça alguns\nCampeões",
+          "section.champion-list.description":"Com mais de 140 Campeões, você encontrará a combinação perfeita para seu estilo de jogo. Especialize-se em um estilo ou em todos.",
+          "section.champion-list.title":"Escolha seu\nCampeão",
+          "section.champion-roles.description":"Quer você goste de se jogar na batalha, ajudar seus aliados ou os dois, existe um lugar para você no Rift.",
+          "section.champion-roles.title":"Escolha seu\nCampeão",
+          "section.champion-style.description":"Personalize o jogo mudando o visual dos seus Campeões favoritos com skins.",
+          "section.champion-style.title":"Arrase com\nestilo",
+          "section.download-app.description":"Baixe o aplicativo do League para sempre estar conectado aos seus amigos e ter acesso às partidas e notícias mais recentes dos Esports.",
+          "section.download-app.title":"Leve o League com você",
+          "section.game-modes.title":"Várias maneiras de\njogar",
+          "section.how-to-play.about.description":"League of Legends é um jogo de estratégia em que duas equipes de cinco poderosos Campeões se enfrentam para destruir a base uma da outra. Escolha entre mais de 140 Campeões para realizar jogadas épicas, assegurar abates e destruir torres conforme você luta até a vitória.",
+          "section.how-to-play.about.title":"O que é League of Legends?",
+          "section.how-to-play.description":"Existe muita coisa para se aprender sobre o League, então começaremos com o básico. Explore o guia abaixo para ter um resumo sobre o modo de jogo mais jogado.",
+          "section.how-to-play.guide.neutrals.desc":"Entre as rotas, está a selva, onde monstros neutros e plantas ficam. Os dois tipos de monstros mais importantes são o Barão Na’Shor e os dragões, pois abater essas unidades concede efeitos exclusivos para sua equipe e pode mudar o rumo da partida.",
+          "section.how-to-play.guide.neutrals.title":"Entrando na selva",
+          "section.how-to-play.guide.neutrals.topic-baron.desc":"O Barão Na’Shor é o monstro mais poderoso da selva. Ele concede Dano de Ataque e Poder de Habilidade adicionais, Retorno rápido e um grande aumento no poder de tropas próximas para a equipe que o derrotar.",
+          "section.how-to-play.guide.neutrals.topic-baron.title":"Barão Na'Shor",
+          "section.how-to-play.guide.neutrals.topic-drakes.desc":"Dragões são monstros poderosos que concedem efeitos exclusivos dependendo do dragão que sua equipe derrotar. Existem cinco Dragões Elementais e um Dragão Ancião.",
+          "section.how-to-play.guide.neutrals.topic-drakes.desc-with-all-drakes":"Dragões são monstros poderosos que concedem efeitos exclusivos e até alteram o terreno do mapa dependendo do dragão que sua equipe derrotar. Existem cinco Dragões Elementais ([Infernal](tooltip:infernal-drake), [Nuvens](tooltip:cloud-drake), [Montanha](tooltip:mountain-drake), [Oceano](tooltip:ocean-drake) e [Hextec](tooltip:hextech-drake)), e um [Dragão Ancião](tooltip:elder-dragon).",
+          "section.how-to-play.guide.neutrals.topic-drakes.title":"Dragões",
+          "section.how-to-play.guide.objectives.desc":"O Nexus é o coração da base de uma equipe. Destrua o Nexus inimigo primeiro para vencer a partida.",
+          "section.how-to-play.guide.objectives.title":"Destrua a base",
+          "section.how-to-play.guide.objectives.topic-enemy-nexus.desc":"Localizado na base da equipe inimiga, o Nexus inimigo é como o seu. Ao destruí-lo, sua equipe vence.",
+          "section.how-to-play.guide.objectives.topic-enemy-nexus.title":"Nexus inimigo",
+          "section.how-to-play.guide.objectives.topic-your-nexus.desc":"Seu Nexus é de onde suas [tropas](tooltip:minions) surgem. Atrás dele está a [fonte](tooltip:fountain), onde você pode rapidamente recuperar Vida e Mana e acessar a [loja](tooltip:shop).",
+          "section.how-to-play.guide.objectives.topic-your-nexus.title":"Seu Nexus",
+          "section.how-to-play.guide.positions.desc":"Existem cinco posições que integram a composição de equipe recomendada para o jogo. Cada rota combina melhor com certos tipos de Campeões e funções, então experimente todas elas ou foque na rota que mais lhe agradar.",
+          "section.how-to-play.guide.positions.title":"Escolha sua rota",
+          "section.how-to-play.guide.positions.topic-bot.desc":"Campeões da rota inferior são a fonte preciosa de dano de cada equipe e precisam ser protegidos no início de jogo até que acumulem ouro e experiência o suficiente para carregar toda a equipe até a vitória.",
+          "section.how-to-play.guide.positions.topic-bot.title":"Rota Inferior",
+          "section.how-to-play.guide.positions.topic-jungle.desc":"Caçadores vivem pela caça. Espreitando entre as rotas com furtividade e habilidade, eles ficam atentos aos monstros da selva mais importantes e avançam no momento que o oponente baixar a guarda.",
+          "section.how-to-play.guide.positions.topic-jungle.title":"Selva",
+          "section.how-to-play.guide.positions.topic-mid.desc":"Campeões da rota do meio são aqueles que possuem alto dano explosivo e podem fazer de tudo, sejam sozinhos ou em equipe. Para eles, o combate é uma dança perigosa, e nela devem sempre buscar oportunidades para superar seu oponente.",
+          "section.how-to-play.guide.positions.topic-mid.title":"Rota do meio",
+          "section.how-to-play.guide.positions.topic-support.desc":"Campeões Suporte são os guardiões da equipe. Eles ajudam a manter seus aliados vivos e focam primordialmente em armar abates, protegendo seu parceiro na rota inferior até que fique mais forte.",
+          "section.how-to-play.guide.positions.topic-support.title":"Suporte",
+          "section.how-to-play.guide.positions.topic-top.desc":"Campeões na rota superior são os lutadores durões e solitários da equipe. O trabalho deles é proteger a própria rota e focar seu dano nos membros mais fortes da equipe inimiga.",
+          "section.how-to-play.guide.positions.topic-top.title":"Rota superior",
+          "section.how-to-play.guide.targets.desc":"Sua equipe precisa avançar por pelo menos uma rota para chegar ao Nexus inimigo, contendo em seu caminho estruturas defensivas chamadas de torres e inibidores. Cada rota tem três torres e um inibidor, e cada Nexus é protegido por duas torres.",
+          "section.how-to-play.guide.targets.title":"Abra caminho",
+          "section.how-to-play.guide.targets.topic-inhibitors.desc":"Cada inibidor é protegido por uma torre. Quando destruído, [supertropas](tooltip:super-minions) surgirão naquela rota por alguns minutos e só pararão até que os inibidores ressurjam.",
+          "section.how-to-play.guide.targets.topic-inhibitors.title":"Inibidores",
+          "section.how-to-play.guide.targets.topic-turrets.desc":"Torres causam dano a tropas e Campeões inimigos e fornecem visão limitada da [Névoa de Guerra](tooltip:fog-of-war) para sua equipe. Ataque essas estruturas com tropas à sua frente para evitar sofrer dano e continuar avançando.",
+          "section.how-to-play.guide.targets.topic-turrets.title":"Torres",
+          "section.how-to-play.hud.description":"Campeões têm cinco habilidades principais, dois Feitiços de Invocador especiais e até sete itens de uma vez. Descobrir a melhor ordem para subir o nível das habilidades, quais Feitiços de Invocador usar e a melhor itemização para seu Campeão será essencial para o sucesso da sua equipe.",
+          "section.how-to-play.hud.title":"Melhore suas habilidades",
+          "section.how-to-play.level.description":"Campeões ficam mais fortes obtendo experiência para subir de nível e adquirindo ouro para comprar itens mais poderosos conforme a partida progride. Manter a atenção nesses dois fatores é crucial para superar a outra equipe e destruir a base inimiga.",
+          "section.how-to-play.level.earn-experience.description":"Quando Campeões conseguem certa quantidade de experiência para subir de nível, eles podem habilitar ou fortalecer suas habilidades e melhorar seus atributos base. Ganhe experiência abatendo unidades e Campeões inimigos, dando assistência em abates e destruindo estruturas inimigas.",
+          "section.how-to-play.level.earn-gold.description":"Ouro é a moeda dentro do jogo que possibilita que você compre itens para seu Campeão. Ganhe ouro abatendo unidades e Campeões inimigos, dando assistência em abates, destruindo estruturas inimigas ou equipando itens de acúmulo de ouro. ",
+          "section.how-to-play.level.title":"Fortaleça seu Campeão",
+          "section.how-to-play.reward.description":"Você já aprendeu o básico, agora é hora de aprender mais a cada dia e a cada nível. Ganhe recompensas por fazer login diariamente (não precisa ser consecutivo) e ao subir o nível de sua conta.",
+          "section.how-to-play.reward.heading":"Comece a jogar\nGanhe recompensas",
+          "section.how-to-play.title":"Boas-vindas ao Rift\nAprenda o básico",
+          "section.player-guide.description":"Acabou de chegar ao LoL? Temos um resumo do básico do modo de jogo mais jogado.",
+          "section.player-guide.title":"Comece sua\nlenda",
+          "section.title.more-to-discover":"Mais para\ndescobrir",
+          "see-more.action":"Ver mais",
+          "see-other-social-channels.action":"Confira nossas outras mídias sociais:",
+          "share.title":"Compartilhar",
+          "share-on-facebook.action":"Compartilhar no Facebook",
+          "share-on-line.action":"Compartilhar no Line",
+          "share-on-reddit.action":"Compartilhar no Reddit",
+          "share-on-twitter.action":"Compartilhar no Twitter",
+          "share-on-vk.action":"Compartilhar no VK",
+          "share-this-article.title":"Compartilhar este artigo",
+          "shop.description":"Na loja, você pode comprar e vender itens usando o ouro que ganhou. Ela só pode ser acessada enquanto você estiver na fonte. ",
+          "shop.title":"Loja",
+          "site.nexus.title":"Nexus",
+          "site.nexus.view-all-news.title":"Ver todas as notícias do Nexus",
+          "skills-and-abilities.title":"Feitiços e habilidades",
+          "smite.description":"Golpear causa Dano Verdadeiro instantaneamente contra monstros e é considerado um Feitiço de Invocador essencial para os caçadores. ",
+          "smite.title":"Golpear",
+          "social-network.line.title":"Line",
+          "starter-champions.title":"Campeões iniciais",
+          "structures.title":"Estruturas",
+          "suggested-lane.title":"Rota sugerida",
+          "summoner-spells.description":"Feitiços de Invocador são habilidades com efeitos exclusivos que os Campeões podem usar e estão associados às teclas D e F. Existem muitos feitiços, mas os mais comumente usados são [Flash](tooltip:flash), [Teleporte](tooltip:teleport), [Golpear](tooltip:smite) e [Incendiar](tooltip:ignite).",
+          "summoner-spells.title":"Feitiços de Invocador",
+          "super-minions.description":"Supertropas são tropas mais poderosas com alcance corpo a corpo, que podem facilmente abater ondas de tropas e estruturas inimigas.",
+          "super-minions.title":"Supertropas",
+          "teleport.description":"Teleporte pode transportar seu Campeão até uma torre, tropa ou sentinela aliada em qualquer lugar do mapa após um certo intervalo. ",
+          "teleport.title":"Teleporte",
+          "thumbnail-view.action":"Visão miniatura",
+          "trinkets.description":"Amuletos são itens únicos que podem ser obtidos na loja gratuitamente e ajudam concedendo visão do mapa ou destruindo sentinelas inimigas.",
+          "trinkets.title":"Amuletos",
+          "twitter.title":"Twitter",
+          "youtube.title":"YouTube",
+          "twitch.title":"Twitch",
+          "ultimate-ability.description":"A ultimate do seu Campeão está associada à tecla R e fica disponível quando você alcança o nível 6. Ultimates são consideradas as habilidades mais poderosas e decisivas do jogo. ",
+          "ultimate-ability.title":"Habilidade ultimate",
+          "view-image-x-of-y.action.icu":"Visualizar imagem {x, plural, other {#}} de {y, plural, other {#}}",
+          "view-latest-news.action":"Ver notícias mais recentes",
+          "view-more.action":"Exibir mais",
+          "vk.title":"VK",
+          "x-of-y.title.icu":"{x, plural, other {#}} de {y, plural, other {#}}",
+          "puzzle.title":"Sentinelas da Luz",
+          "puzzle.stage1.ruin":"DESTRUIÇÃO",
+          "puzzle.input.typehere":"DIGITE AQUI",
+          "puzzle.stage3.title1":"BOAS-VINDAS",
+          "puzzle.stage3.title2":"SENTINELA",
+          "puzzle.stage3.letter":"Aos Sentinelas —\nCaso eu morra, nomeio Akshan como meu sucessor, quem herdará minha arma e protegerá Shurima das forças dos mortos-vivos.\nQue você nos encontre um dia,\nShadya",
+          "puzzle.stage4.download":"BAIXAR ARTE",
+          "puzzle.stage4.dates":"8 DE JULHO A 10 DE AGOSTO",
+          "puzzle.submit.enter":"ENTRAR"
+        },
+        "routed":true,
+        "originalPath":"/champions/aatrox/",
+        "redirect":false,
+        "defaultLanguage":"pt-br"
+      }
+    }
+  },
+  "staticQueryHashes":[
+    "3485666118",
+    "3485666118"
+  ]
+}
