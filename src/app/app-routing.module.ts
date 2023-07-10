@@ -21,6 +21,16 @@ const routes: Routes = [
     path: 'champions',
     loadChildren: () => import('./views/champions/champions.module').then((m) => m.ChampionsModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'runes',
+    loadChildren: () => import('./views/runes/runes.module').then((m) => m.RunesModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'items',
+    loadChildren: () => import('./views/items/items.module').then((m) => m.ItemsModule),
+    canActivate: [AuthGuard]
   }
 ];
 

@@ -8,6 +8,7 @@ import {TokenInterceptor} from "./services/interceptors/token.interceptor";
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import {HeaderModule} from "./shared/header/header.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    HeaderModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
   ],

@@ -8,7 +8,7 @@
     <div class="login-container">
 
       <div class="login-title-container">
-        <h2>{{ isLoginMode ? 'Login' : 'Sign up' }}</h2>
+        <h2>{{ isLoginMode ? 'Entrar' : 'Cadastre-se' }}</h2>
       </div>
 
       <form #authForm="ngForm" id="login-form" (ngSubmit)="onSubmit(authForm)" autocomplete="off">
@@ -28,10 +28,6 @@
               <i *ngIf="showPassword" class="bi bi-eye-slash show-password-icon"></i>
             </span>
           </div>
-
-
-
-
         </div>
 
         <div class="form-group login-form-btn-container">
@@ -39,7 +35,7 @@
             [buttonId]="'login-submit-btn'"
             [buttonType]="'submit'"
             [buttonStyle]="'primary'"
-            [buttonText]="isLoginMode ? 'Login' : 'Sign up'"
+            [buttonText]="isLoginMode ? 'Entrar' : 'Cadastre-se'"
             [buttonDisable]="!authForm.valid">
           </app-dynamic-button>
 
@@ -48,7 +44,7 @@
             [buttonId]="'login-switch-btn'"
             [buttonType]="'button'"
             [buttonStyle]="'primary'"
-            [buttonText]="!isLoginMode ? 'Switch to login' : 'Switch to sign up'"
+            [buttonText]="!isLoginMode ? 'Ir para o login' : 'Ir para o cadastro'"
             [buttonDisable]="false">
           </app-dynamic-button>
         </div>

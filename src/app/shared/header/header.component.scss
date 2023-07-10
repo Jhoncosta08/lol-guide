@@ -1,0 +1,64 @@
+@use "src/custom-theme" as *;
+
+
+/*Start header logo styles*/
+#main-logo-link img {
+  width: 100%;
+  max-width: 3rem;
+  height: auto;
+}
+
+#main-logo-link {
+  color: $primary-gold-two;
+  margin-top: 4px;
+  border-right: 1px solid $secondary-blue-two;
+  padding-right: 1.25rem;
+}
+
+#main-logo-link:hover {
+  color: $secondary-blue-two;
+}
+/*End header logo styles*/
+
+
+/*Start header container style*/
+.header-navbar {
+  box-shadow: 0 3px 6px $primary-gold-one;
+  background-color: $hextech-dark !important;
+}
+/*Start header container style*/
+
+
+/*Start header nav list style*/
+#main-header ul a {
+  color: $primary-gold-two;
+  margin-right: 1.25rem;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#main-header ul a:hover {
+  color: $secondary-blue-two;
+}
+
+.header-logout {
+  width: 100%;
+  text-align: end;
+}
+
+.header-logout i {
+  color: $primary-gold-two;
+  font-size: 1.563rem;
+  margin-right: 0.625rem;
+  cursor: pointer;
+}
+
+.header-logout i:hover {
+  color: $secondary-blue-two;
+}
+
+.active-link span {
+  color: $secondary-blue-two;
+}
+/*End header nav list style*/

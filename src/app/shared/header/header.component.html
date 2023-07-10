@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light header-navbar">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" id="main-logo-link" [routerLink]="['/dashboard']">
+      <img src="./assets/img/main-logo.png" alt="main-logo"/>
+      LOL GUIDE
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#main-header"
+      aria-controls="main-header"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="main-header">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link hvr-float" [routerLink]="['/champions']" routerLinkActive="active-link"><span>Campeões</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link hvr-float" [routerLink]="['/runes']" routerLinkActive="active-link"><span>Runas</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link hvr-float" [routerLink]="['/items']" routerLinkActive="active-link"><span>Itens</span></a>
+        </li>
+      </ul>
+      <div class="header-logout">
+        <a class="hvr-forward" (click)="logout()"><i class="bi bi-box-arrow-in-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</nav>
