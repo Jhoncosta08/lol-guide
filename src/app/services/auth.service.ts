@@ -16,7 +16,8 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private route: Router
-  ) { }
+  ) {
+  }
 
   private errorHandling(error: HttpErrorResponse) {
     let errorMessage: string = 'An unknown error occurred!';

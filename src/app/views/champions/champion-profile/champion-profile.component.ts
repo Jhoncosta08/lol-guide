@@ -14,8 +14,14 @@ export class ChampionProfileComponent implements OnInit{
   }
 
   getProfileChamp() {
-    this.championsService.getChampionData('teemo').subscribe(test => {
-      console.log('test', test);
-    })
+    this.championsService.getChampionsList().subscribe({
+      next: champion => {
+        console.log('champion: ', champion);
+      },
+      error: err => {
+        console.error('Error when tied to get champion', err);
+      }
+    });
   }
+
 }

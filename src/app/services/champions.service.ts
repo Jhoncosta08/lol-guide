@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Endpoints} from "../endpoints";
+import {Firestore, collection, addDoc, collectionData} from "@angular/fire/firestore";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChampionsService {
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private fireStorage: Firestore
+  ) {}
 
-  getChampionsList(champion: any) {
-    return this.http.post(Endpoints.getChampionsList(), champion);
+  getChampionsList() {
+    const championList = collection(this.fireStorage, `champions`);
+    return collectionData(championList);
   }
 
   getChampionData(championName: string) {
-    return this.http.get(Endpoints.getChampionData(championName));
+    const champion = collection(this.fireStorage, `champions/${championName}`);
+    return collectionData(champion);
+  }
+
+  createNewChampion(champion: any) {
+    const championCollection = collection(this.fireStorage, `champions`);
+    return addDoc(championCollection, champion);
   }
 }

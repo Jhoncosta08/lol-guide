@@ -1,7 +1,6 @@
 
 export const environment  = {
   production: false,
-  apiUrl: 'https://firestore.googleapis.com/v1/projects/lol-guide-web/databases/documents',
   firebase: {
     apiKey: "AIzaSyC6dpjsuf-E84ZGbrirfQVa4miNAKJSffw",
     authDomain: "lol-guide-web.firebaseapp.com",
