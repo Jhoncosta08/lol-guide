@@ -2,11 +2,11 @@
 export const environment  = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyAzI4WbDrJKBxoP20KoTLUNeiBAORVJ6O0",
-    authDomain: "lol-guide-id.firebaseapp.com",
-    projectId: "lol-guide-id",
-    storageBucket: "lol-guide-id.appspot.com",
-    messagingSenderId: "799452148796",
-    appId: "1:799452148796:web:ea5b8589d60148676e7f39"
+    apiKey: "AIzaSyC6dpjsuf-E84ZGbrirfQVa4miNAKJSffw",
+    authDomain: "lol-guide-web.firebaseapp.com",
+    projectId: "lol-guide-web",
+    storageBucket: "lol-guide-web.appspot.com",
+    messagingSenderId: "947637903349",
+    appId: "1:947637903349:web:e3688dc91900062409cabc"
   }
 }
