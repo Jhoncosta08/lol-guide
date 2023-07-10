@@ -36,6 +36,7 @@ export class AuthService {
   }
 
   createNewUserData(resData: any): void {
+    console.log('user: ', resData);
     const expirationDate = new Date(new Date().getTime() + resData.expiresIn * 1000 );
     const user = new UserModel(resData.email, resData.localId, resData.idToken, expirationDate);
     this.user.next(user);

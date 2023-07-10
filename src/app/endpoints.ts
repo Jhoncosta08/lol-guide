@@ -4,11 +4,11 @@ export class Endpoints {
 
   //LOGIN ROUTES
   static signUpApi(): string {
-    return `https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=${environment.firebase.apiKey}`;
+    return `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.firebase.apiKey}`;
   }
 
   static signInApi(): string {
-    return `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${environment.firebase.apiKey}`;
+    return `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${environment.firebase.apiKey}`;
   }
 
 }
