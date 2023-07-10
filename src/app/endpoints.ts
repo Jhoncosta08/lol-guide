@@ -12,12 +12,12 @@ export class Endpoints {
   }
 
   //CHAMPIONS ROUTES
-  static championsApi(): string {
+  static getChampionsList(): string {
     return `${environment.apiUrl}/champions`;
   }
 
-  static championProfileApi(championName: string): string {
-    return `${environment.apiUrl}/champions/${championName}/${championName}.json`;
+  static getChampionData(championName: string): string {
+    return `${environment.apiUrl}/champions/${championName}`;
   }
 
 }

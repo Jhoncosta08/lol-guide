@@ -14,8 +14,8 @@ export class ChampionProfileComponent implements OnInit{
   }
 
   getProfileChamp() {
-    this.championsService.getChampionProfile('').subscribe(res => {
-      console.log('data: ', res);
-    });
+    this.championsService.getChampionData('teemo').subscribe(test => {
+      console.log('test', test);
+    })
   }
 }

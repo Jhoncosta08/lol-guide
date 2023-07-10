@@ -9,18 +9,11 @@ export class ChampionsService {
 
   constructor(private http: HttpClient) {}
 
-  getChampions() {
-    return this.http.get(Endpoints.championsApi());
+  getChampionsList(champion: any) {
+    return this.http.post(Endpoints.getChampionsList(), champion);
   }
 
-  createNewChampion(champion: any) {
-    return this.http.post(Endpoints.championsApi(), champion);
-  }
-
-  getChampionProfile(championName: string) {
-    return this.http.get(
-      'https://www.leagueoflegends.com/page-data/pt-br/champions/aatrox/page-data.json',
-      );
-    //return this.http.get(Endpoints.championProfileApi(championName));
+  getChampionData(championName: string) {
+    return this.http.get(Endpoints.getChampionData(championName));
   }
 }
