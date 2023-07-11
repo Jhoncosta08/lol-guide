@@ -1,14 +1,9 @@
-<div *ngIf="champTest && champTest.length >= 1" class="container">
-  <div *ngFor="let champ of champTest" class="test">
-    <p><img [src]="champ.championIcon" [alt]="champ.championName"/> --- {{ champ.championName }}</p>
-    <p>{{ champ.championTitle }}</p>
-    <img [src]="champ.championSplash" [alt]="champ.championName"/>
-    <p>{{ champ.championLore }}</p>
+<div *ngIf="champData" class="container">
+  <div class="test">
+    <p><img [src]="champData.championIcon" [alt]="champData.championName"/> --- {{ champData.championName }}</p>
+    <p>{{ champData.championTitle }}</p>
+    <img [src]="champData.championSplash" [alt]="champData.championName"/>
+    <p>{{ champData.championLore }}</p>
   </div>
-</div>
-
-
-<div *ngIf="runeUrl" class="test">
-  <iframe [src]="runeUrl"></iframe>
 </div>
 

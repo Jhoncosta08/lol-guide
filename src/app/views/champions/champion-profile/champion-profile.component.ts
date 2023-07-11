@@ -8,8 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./champion-profile.component.scss']
 })
 export class ChampionProfileComponent implements OnInit{
-  champTest: any[] = [];
-  runeUrl: any;
+  champData: any;
   constructor(
     private championsService: ChampionsService,
     readonly activatedRoute: ActivatedRoute
@@ -23,18 +22,11 @@ export class ChampionProfileComponent implements OnInit{
   }
 
   getProfileChamp(championParamsId: string) {
-    this.championsService.getChampionsList().subscribe({
-      next: champion => {
-        this.champTest = champion;
-      },
-      error: err => {
-        console.error('Error when tied to get champion', err);
-      }
+    this.championsService.getChampionById(championParamsId).then(res => {
+      this.champData = res.data();
+    }).catch(err => {
+      console.error('Error when tried to get champ by id', err)
     });
-  }
-
-  getById(championParamsId: string) {
-
   }
 
 
