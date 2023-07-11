@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ChampionsService} from "../../services/champions.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-champions',
@@ -8,7 +9,7 @@ import {ChampionsService} from "../../services/champions.service";
 })
 export class ChampionsComponent implements OnInit {
   championsList: any[] = [];
-  constructor(private championsService: ChampionsService) {}
+  constructor(private championsService: ChampionsService, private route: Router) {}
 
   ngOnInit(): void {
     this.getChampionsList();
@@ -24,5 +25,9 @@ export class ChampionsComponent implements OnInit {
         console.error('Error when tried to get champions list', err);
       }
     })
+  }
+
+  redirectToChampPage(championId: string) {
+    void this.route.navigate([`champions/${championId}`], )
   }
 }
