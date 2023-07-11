@@ -1,2 +1,7 @@
-<app-header *ngIf="!this.router.url.includes('/login')" [isAdminUser]="isAdminUser"></app-header>
+<app-header
+  *ngIf="!this.router.url.includes('/login') &&
+  this.router.url !== '/'
+  && user"
+  [isAdminUser]="isAdminUser">
+</app-header>
 <router-outlet></router-outlet>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {ChampionsService} from "../../../services/champions.service";
-import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-champion',
@@ -9,14 +9,23 @@ import {Router} from "@angular/router";
   styleUrls: ['./add-champion.component.scss']
 })
 export class AddChampionComponent {
-  constructor(private championService: ChampionsService, private route: Router) {}
+  championForm!: FormGroup;
+  constructor(
+    private championService: ChampionsService,
+    private route: Router,
+    private fb: FormBuilder,
+  ) {
+    this.buildChampionDefaultForm();
+  }
 
-  createChampionFormSubmit(championForm: NgForm) {
-    this.championService.createNewChampion(championForm.value).then(res => {
-      this.updateChampionDocWithId(res.id, res.path);
-    }).catch(err => {
-      console.error('Error when tried to create a new champion', err);
-    })
+  createChampionFormSubmit() {
+    console.log('this.championForm', this.championForm);
+    // this.championService.createNewChampion(championForm.value).then(res => {
+    //   this.updateChampionDocWithId(res.id, res.path);
+    // }).catch(err => {
+    //   console.error('Error when tried to create a new champion', err);
+    // })
+
   }
 
   updateChampionDocWithId(championDocId: string, championDocPath: string) {
@@ -27,4 +36,16 @@ export class AddChampionComponent {
       console.log('Error when tried to set id', err);
     })
   }
+
+  buildChampionDefaultForm() {
+    this.championForm = this.fb.group({
+      championName: ['', Validators.required],
+      championLore: ['', Validators.required],
+      championIcon: ['', Validators.required],
+      championSplash: ['', Validators.required],
+      championTitle: ['', Validators.required],
+      championSkins: new FormArray([])
+    });
+  }
+
 }

@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () => import('./views/auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'dashboard'
+  },
+  {
     path: 'dashboard',
     loadChildren: () => import('./views/dashboard/dashboard.module').then((m) => m.DashboardModule),
     canActivate: [AuthGuard]

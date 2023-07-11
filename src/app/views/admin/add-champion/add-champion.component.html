@@ -1,55 +1,64 @@
 <div class="new-champion-container">
   <div class="champion-form-container">
     <h1>Criação de campeão</h1>
-    <form #championForm="ngForm" (ngSubmit)="createChampionFormSubmit(championForm)" id="champion-form">
+    <form [formGroup]="championForm" (ngSubmit)="createChampionFormSubmit()" id="champion-form">
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <input id="champion-url" class="form-control" name="championUrl" type="text" required placeholder="Url do campeão" ngModel/>
+      <div class="row">
+        <div class="col-sm">
+          <h2>Skins do campeão</h2>
         </div>
-      </div>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <input id="champion-name" class="form-control" name="championName" type="text" required placeholder="Nome do campeão" ngModel/>
+        <div class="col-sm">
+          <h2>Skills do campeão</h2>
         </div>
-      </div>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <textarea id="champion-lore" class="form-control" name="championLore" required placeholder="Lore do campeão" ngModel rows="3"></textarea>
-        </div>
-      </div>
+        <div class="col-sm">
+          <h2>Informações básicas</h2>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <input id="champion-icon" class="form-control" name="championIcon" type="text" required placeholder="Ícone do campeão" ngModel/>
-        </div>
-      </div>
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <input id="champion-name" class="form-control" name="championName" formControlName="championName" type="text" required placeholder="Nome do campeão"/>
+            </div>
+          </div>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <input id="champion-splash" class="form-control" name="championSplash" type="text" required placeholder="Splash do campeão" ngModel/>
-        </div>
-      </div>
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <textarea id="champion-lore" class="form-control" name="championLore" formControlName="championLore" required placeholder="Lore do campeão" rows="3"></textarea>
+            </div>
+          </div>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <input id="champion-title" class="form-control" name="championTitle" type="text" required placeholder="Titulo do campeão" ngModel/>
-        </div>
-      </div>
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <input id="champion-icon" class="form-control" name="championIcon" formControlName="championIcon" type="text" required placeholder="Ícone do campeão"/>
+            </div>
+          </div>
 
-      <div class="form-group">
-        <div class="input-group mb-3 input-container">
-          <app-dynamic-button
-            [buttonWidth]="250"
-            [buttonText]="'Cadastrar novo campeão'"
-            [buttonStyle]="'primary'"
-            [buttonType]="'submit'"
-            [buttonDisable]="!championForm.valid"
-            [buttonId]="'champion-form-btn'">
-          </app-dynamic-button>
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <input id="champion-splash" class="form-control" name="championSplash" formControlName="championSplash" type="text" required placeholder="Splash do campeão"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <input id="champion-title" class="form-control" name="championTitle" formControlName="championTitle" type="text" required placeholder="Titulo do campeão"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <app-dynamic-button
+                [buttonWidth]="250"
+                [buttonText]="'Cadastrar novo campeão'"
+                [buttonStyle]="'primary'"
+                [buttonType]="'submit'"
+                [buttonDisable]="!championForm.valid"
+                [buttonId]="'champion-form-btn'">
+              </app-dynamic-button>
+            </div>
+          </div>
         </div>
+
       </div>
 
     </form>
