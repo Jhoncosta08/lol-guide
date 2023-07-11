@@ -6,7 +6,7 @@ import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angul
 @Component({
   selector: 'app-add-champion',
   templateUrl: './add-champion.component.html',
-  styleUrls: ['./add-champion.component.scss']
+  styleUrls: ['../admin-manage-pages.scss']
 })
 export class AddChampionComponent {
   championForm!: FormGroup;
@@ -16,6 +16,7 @@ export class AddChampionComponent {
     private fb: FormBuilder,
   ) {
     this.buildChampionDefaultForm();
+    this.addChampionSkinsToFormGroup();
   }
 
   createChampionFormSubmit() {
@@ -44,8 +45,42 @@ export class AddChampionComponent {
       championIcon: ['', Validators.required],
       championSplash: ['', Validators.required],
       championTitle: ['', Validators.required],
-      championSkins: new FormArray([])
+      championSkins: new FormArray([]),
+      championsSkill: new FormGroup({
+        passive: new FormGroup(this.buildDefaultSkillFormValues()),
+        q: new FormGroup(this.buildDefaultSkillFormValues()),
+        w: new FormGroup(this.buildDefaultSkillFormValues()),
+        e: new FormGroup(this.buildDefaultSkillFormValues()),
+      })
     });
+  }
+
+  buildDefaultSkillFormValues() {
+    return {
+      skillName: new FormControl(''),
+      skillImage: new FormControl(''),
+      skillVideo: new FormControl(''),
+      skillDescription: new FormControl(''),
+    }
+  }
+
+
+  getChampionSkinsControlsValues(): FormArray {
+    return this.championForm.get('championSkins') as FormArray;
+  }
+
+  addChampionSkinsToFormGroup(): void {
+    this.getChampionSkinsControlsValues().push(
+      new FormGroup({
+        skinName: new FormControl(''),
+        skinUrl: new FormControl('')
+      })
+    );
+  }
+
+  removeChampionSkinsFormGroup(index: number): void {
+    let projectArray: FormArray = this.getChampionSkinsControlsValues();
+    projectArray.length > 1 ? projectArray.removeAt(index) : projectArray.reset();
   }
 
 }

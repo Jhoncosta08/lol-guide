@@ -13,7 +13,11 @@ button:target,
 input:focus,
 input:active,
 input:hover,
-input:target {
+input:target,
+textarea:focus,
+textarea:active,
+textarea:hover,
+textarea:target,{
   outline: 0;
   -webkit-appearance: none;
   box-shadow: none !important;

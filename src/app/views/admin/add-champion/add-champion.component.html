@@ -1,52 +1,221 @@
 <div class="new-champion-container">
   <div class="champion-form-container">
-    <h1>Criação de campeão</h1>
-    <form [formGroup]="championForm" (ngSubmit)="createChampionFormSubmit()" id="champion-form">
+    <h1 class="page-title">Criação de campeão</h1>
+    <form [formGroup]="championForm" (ngSubmit)="createChampionFormSubmit()" id="champion-form" autocomplete="off">
 
       <div class="row">
-        <div class="col-sm">
-          <h2>Skins do campeão</h2>
+
+        <!--START SKILLS FORM-->
+        <div class="col-sm" formGroupName="championsSkill">
+          <h2 class="page-sub-title">Skills do campeão</h2>
+
+          <div class="passive-container skins-array-container" formGroupName="passive">
+            <small>Skill passiva: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillName" class="form-control manage-input" name="skillName" formControlName="skillName" type="text" required placeholder="Nome da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillImage" class="form-control manage-input" name="skillImage" formControlName="skillImage" type="text" required placeholder="Imagem da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillVideo" class="form-control manage-input" name="skillVideo" formControlName="skillVideo" type="text" required placeholder="Video da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 textarea-container">
+                <textarea id="skillDescription" class="form-control textarea-input" name="skillDescription" formControlName="skillDescription" required placeholder="Descrição da skill" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="passive-container skins-array-container" formGroupName="q">
+            <small>Skill Q: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillNameQ" class="form-control manage-input" name="skillName" formControlName="skillName" type="text" required placeholder="Nome da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillImageQ" class="form-control manage-input" name="skillImage" formControlName="skillImage" type="text" required placeholder="Imagem da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillVideoQ" class="form-control manage-input" name="skillVideo" formControlName="skillVideo" type="text" required placeholder="Video da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 textarea-container">
+                <textarea id="skillDescriptionQ" class="form-control textarea-input" name="skillDescription" formControlName="skillDescription" required placeholder="Descrição da skill" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="passive-container skins-array-container" formGroupName="w">
+            <small>Skill W: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillNameW" class="form-control manage-input" name="skillName" formControlName="skillName" type="text" required placeholder="Nome da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillImageW" class="form-control manage-input" name="skillImage" formControlName="skillImage" type="text" required placeholder="Imagem da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillVideoW" class="form-control manage-input" name="skillVideo" formControlName="skillVideo" type="text" required placeholder="Video da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 textarea-container">
+                <textarea id="skillDescriptionW" class="form-control textarea-input" name="skillDescription" formControlName="skillDescription" required placeholder="Descrição da skill" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="passive-container skins-array-container" formGroupName="e">
+            <small>Skill E: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillNameE" class="form-control manage-input" name="skillName" formControlName="skillName" type="text" required placeholder="Nome da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillImageE" class="form-control manage-input" name="skillImage" formControlName="skillImage" type="text" required placeholder="Imagem da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input id="skillVideoE" class="form-control manage-input" name="skillVideo" formControlName="skillVideo" type="text" required placeholder="Video da skill"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 textarea-container">
+                <textarea id="skillDescriptionE" class="form-control textarea-input" name="skillDescription" formControlName="skillDescription" required placeholder="Descrição da skill" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!--END SKILLS FORM-->
 
+
+        <!--START SKINS FORM-->
         <div class="col-sm">
-          <h2>Skills do campeão</h2>
+          <h2 class="page-sub-title">Skins do campeão</h2>
+
+          <ng-template ngFor [ngForOf]="getChampionSkinsControlsValues().controls" let-i="index" formArrayName="championSkins">
+            <div class="skins-array-container">
+              <small>Skin: {{ i + 1}}</small>
+              <div class="skin-form-group" [formGroupName]="i">
+                <div class="input-group mb-3 input-container">
+                  <input type="text" class="form-control manage-input" placeholder="Nome da skin" formControlName="skinName">
+                </div>
+
+                <div class="input-group mb-3 input-container">
+                  <input type="text" class="form-control manage-input" placeholder="Ulr da skin" formControlName="skinUrl">
+                </div>
+
+                <div class="input-group mb-3">
+                  <app-dynamic-button
+                    (buttonAction)="removeChampionSkinsFormGroup(i)"
+                    [buttonWidth]="200"
+                    [buttonStyle]="'danger'"
+                    [buttonType]="'button'"
+                    [buttonDisable]="false"
+                    [buttonId]="'new-skin-btn'"
+                    [buttonText]="'Remover'">
+                  </app-dynamic-button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+          <div class="row">
+            <div class="col">
+              <app-dynamic-button
+                (buttonAction)="addChampionSkinsToFormGroup()"
+                [buttonWidth]="200"
+                [buttonStyle]="'primary'"
+                [buttonType]="'button'"
+                [buttonDisable]="false"
+                [buttonId]="'new-skin-btn'"
+                [buttonText]="'Adicionar nova skin'">
+              </app-dynamic-button>
+            </div>
+          </div>
+
         </div>
+        <!--END SKINS FORM-->
 
+
+        <!--START BASIC FORM-->
         <div class="col-sm">
-          <h2>Informações básicas</h2>
+          <h2 class="page-sub-title">Informações básicas</h2>
 
           <div class="form-group">
             <div class="input-group mb-3 input-container">
-              <input id="champion-name" class="form-control" name="championName" formControlName="championName" type="text" required placeholder="Nome do campeão"/>
+              <input id="champion-name" class="form-control manage-input" name="championName" formControlName="championName" type="text" required placeholder="Nome do campeão"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-group mb-3 input-container">
-              <textarea id="champion-lore" class="form-control" name="championLore" formControlName="championLore" required placeholder="Lore do campeão" rows="3"></textarea>
+              <input id="champion-icon" class="form-control manage-input" name="championIcon" formControlName="championIcon" type="text" required placeholder="Ícone do campeão"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-group mb-3 input-container">
-              <input id="champion-icon" class="form-control" name="championIcon" formControlName="championIcon" type="text" required placeholder="Ícone do campeão"/>
+              <input id="champion-splash" class="form-control manage-input" name="championSplash" formControlName="championSplash" type="text" required placeholder="Splash do campeão"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="input-group mb-3 input-container">
-              <input id="champion-splash" class="form-control" name="championSplash" formControlName="championSplash" type="text" required placeholder="Splash do campeão"/>
+              <input id="champion-title" class="form-control manage-input" name="championTitle" formControlName="championTitle" type="text" required placeholder="Titulo do campeão"/>
             </div>
           </div>
 
           <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="champion-title" class="form-control" name="championTitle" formControlName="championTitle" type="text" required placeholder="Titulo do campeão"/>
+            <div class="input-group mb-3 textarea-container">
+              <textarea id="champion-lore" class="form-control textarea-input" name="championLore" formControlName="championLore" required placeholder="Lore do campeão" rows="3"></textarea>
             </div>
           </div>
 
           <div class="form-group">
-            <div class="input-group mb-3 input-container">
+            <div class="input-group mb-3 submit-button-container">
+              <app-dynamic-button
+                (buttonAction)="championForm.reset()"
+                [buttonWidth]="250"
+                [buttonText]="'Limpar formulário'"
+                [buttonStyle]="'primary'"
+                [buttonType]="'button'"
+                [buttonDisable]="false"
+                [buttonId]="'champion-form-clear-btn'">
+              </app-dynamic-button>
+
               <app-dynamic-button
                 [buttonWidth]="250"
                 [buttonText]="'Cadastrar novo campeão'"
@@ -58,6 +227,8 @@
             </div>
           </div>
         </div>
+        <!--END BASIC FORM-->
+
 
       </div>
 

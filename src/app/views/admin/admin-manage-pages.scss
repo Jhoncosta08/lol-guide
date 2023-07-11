@@ -1,0 +1,87 @@
+@use "src/custom-theme" as *;
+
+.new-champion-container {
+  width: 100%;
+  min-height: 91.2vh;
+  display: flex;
+  padding: 20px;
+  background-color: $secondary-blue-dark;
+}
+
+.page-title {
+  color: $primary-gold-one;
+}
+
+.page-sub-title {
+  color: $primary-gold-three;
+}
+
+.champion-form-container {
+  width: 100%;
+  height: auto;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#champion-form small {
+  color: $secondary-blue-two;
+}
+
+.skin-form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-skin {
+  cursor: pointer;
+  color: $primary-danger;
+}
+
+.input-container {
+  border-bottom: 1px solid $primary-gold-one;
+  margin-right: 15px;
+}
+
+.input-container:hover {
+  border-bottom: 1px solid $primary-gold-three;
+}
+
+.manage-input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+#champion-form .manage-input::placeholder, .manage-input, select, textarea {
+  color: $grey-one;
+}
+
+.textarea-container {
+  border: 1px solid $primary-gold-one;
+  margin: 2.188rem 0 0 0.188rem;
+}
+
+.textarea-container:hover {
+  border-color: $primary-gold-three;
+}
+
+#champion-form .textarea-input::placeholder, .textarea-input, select, textarea {
+  color: $grey-one;
+}
+
+.textarea-input {
+  border: none;
+  background-color: transparent;
+}
+
+.skins-array-container {
+  padding: 10px;
+  margin: 5px 3px 5px 3px;
+  border: 1px solid $secondary-blue-two;
+}
+
