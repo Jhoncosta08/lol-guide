@@ -1,1 +1,9 @@
-<p>champions works!</p>
+<div class="champions-container">
+
+  <div *ngIf="championsList && championsList.length >= 1" class="row">
+    <div *ngFor="let champion of championsList" class="col-sm-2 champion-card">
+      <p>{{ champion.championName }}</p>
+    </div>
+  </div>
+
+</div>

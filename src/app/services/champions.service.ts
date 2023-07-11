@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Firestore, collection, addDoc, collectionData, doc, getDoc} from "@angular/fire/firestore";
+import {Firestore, collection, addDoc, collectionData, doc, getDoc, setDoc} from "@angular/fire/firestore";
 import {ChampionInterface} from "../interfaces/champion.interface";
 
 @Injectable({
@@ -25,5 +25,10 @@ export class ChampionsService {
   createNewChampion(champion: ChampionInterface) {
     const championCollection = collection(this.fireStorage, `champions`);
     return addDoc(championCollection, champion);
+  }
+
+  updateChampion(championDocId: string) {
+    const docRef = doc(this.fireStorage, "champions", championDocId);
+    return setDoc(docRef, { id: championDocId }, { merge: true });
   }
 }
