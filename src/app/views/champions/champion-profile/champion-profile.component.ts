@@ -24,6 +24,7 @@ export class ChampionProfileComponent implements OnInit{
   getProfileChamp(championParamsId: string) {
     this.championsService.getChampionById(championParamsId).then(res => {
       this.champData = res.data();
+      console.log('champ: ', this.champData);
     }).catch(err => {
       console.error('Error when tried to get champ by id', err)
     });

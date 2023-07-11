@@ -20,13 +20,11 @@ export class AddChampionComponent {
   }
 
   createChampionFormSubmit() {
-    console.log('this.championForm', this.championForm);
-    // this.championService.createNewChampion(championForm.value).then(res => {
-    //   this.updateChampionDocWithId(res.id, res.path);
-    // }).catch(err => {
-    //   console.error('Error when tried to create a new champion', err);
-    // })
-
+    this.championService.createNewChampion(this.championForm.value).then(res => {
+      this.updateChampionDocWithId(res.id, res.path);
+    }).catch(err => {
+      console.error('Error when tried to create a new champion', err);
+    })
   }
 
   updateChampionDocWithId(championDocId: string, championDocPath: string) {
@@ -58,6 +56,7 @@ export class AddChampionComponent {
         q: new FormGroup(this.buildDefaultSkillFormValues()),
         w: new FormGroup(this.buildDefaultSkillFormValues()),
         e: new FormGroup(this.buildDefaultSkillFormValues()),
+        r: new FormGroup(this.buildDefaultSkillFormValues()),
       })
     });
   }
