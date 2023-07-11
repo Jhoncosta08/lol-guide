@@ -85,3 +85,32 @@
   border: 1px solid $secondary-blue-two;
 }
 
+.lane-input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.lanes-form-container {
+  border: 1px solid $primary-gold-one;
+  padding: 20px;
+}
+
+.lane-checkbox-label {
+  color: $grey-one;
+}
+
+.lane-checkbox-input {
+  border: 1px solid $primary-gold-one;
+  border-radius: 2px;
+  background-color: transparent !important;
+  margin-right: 10px;
+  font-size: 18px;
+  color: $grey-one;
+}
+
+.lane-checkbox-input:checked {
+  background-color: $primary-gold-one !important;
+}
+

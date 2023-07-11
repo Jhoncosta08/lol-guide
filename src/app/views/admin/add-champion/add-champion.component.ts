@@ -45,6 +45,13 @@ export class AddChampionComponent {
       championIcon: ['', Validators.required],
       championSplash: ['', Validators.required],
       championTitle: ['', Validators.required],
+      championLanes: new FormGroup({
+        top: new FormControl('Topo'),
+        mage: new FormControl('Meio'),
+        adc: new FormControl('Adc'),
+        jungle: new FormControl('Selva'),
+        support: new FormControl('Support'),
+      }),
       championSkins: new FormArray([]),
       championsSkill: new FormGroup({
         passive: new FormGroup(this.buildDefaultSkillFormValues()),

@@ -198,6 +198,38 @@
             </div>
           </div>
 
+          <div class="form-group lanes-form-container" formGroupName="championLanes">
+            <small>Áreas do campeão: </small>
+
+            <div class="lane-input-container">
+              <div class="form-check">
+                <input id="top" class="form-check-input lane-checkbox-input" type="checkbox" name="top" formControlName="top">
+                <label class="form-check-label lane-checkbox-label" for="top">Topo</label>
+              </div>
+
+              <div class="form-check">
+                <input id="mage" class="form-check-input lane-checkbox-input" type="checkbox" name="mage" formControlName="mage">
+                <label class="form-check-label lane-checkbox-label" for="mage">Meio</label>
+              </div>
+
+              <div class="form-check">
+                <input id="adc" class="form-check-input lane-checkbox-input" type="checkbox" name="adc" formControlName="adc">
+                <label class="form-check-label lane-checkbox-label" for="adc">Adc</label>
+              </div>
+
+              <div class="form-check">
+                <input id="jungle" class="form-check-input lane-checkbox-input" type="checkbox" name="jungle" formControlName="jungle">
+                <label class="form-check-label lane-checkbox-label" for="jungle">Selva</label>
+              </div>
+
+              <div class="form-check">
+                <input id="support" class="form-check-input lane-checkbox-input" type="checkbox" name="support" formControlName="support">
+                <label class="form-check-label lane-checkbox-label" for="support">Suporte</label>
+              </div>
+            </div>
+
+          </div>
+
           <div class="form-group">
             <div class="input-group mb-3 textarea-container">
               <textarea id="champion-lore" class="form-control textarea-input" name="championLore" formControlName="championLore" required placeholder="Lore do campeão" rows="3"></textarea>
