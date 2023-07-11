@@ -1,5 +1,4 @@
 export interface ChampionInterface {
-  championId: string,
   championUrl: string,
   championName: string,
   championLore: string,
