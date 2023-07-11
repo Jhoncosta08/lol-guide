@@ -7,9 +7,7 @@ import {ChampionInterface} from "../interfaces/champion.interface";
 })
 export class ChampionsService {
 
-  constructor(
-    private fireStorage: Firestore
-  ) {}
+  constructor(private fireStorage: Firestore) {}
 
   getChampionsList() {
     const championList = collection(this.fireStorage, `champions`);
