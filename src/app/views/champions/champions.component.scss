@@ -1,13 +1,15 @@
+@use "src/custom-theme" as *;
 
 
 .champions-container {
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
-  margin-top: 20px;
+  padding-top: 20px;
+  background-color: $secondary-blue-dark;
 }
 
 .card-container {
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -18,15 +20,18 @@
   max-height: 280px;
   width: 100%;
   max-width: 350px;
-  border-radius: 10px;
   margin: 10px;
   transition: 0.4s ease-out;
   cursor: pointer;
   padding: 0;
   background-color: transparent;
+  box-shadow: 0 0 6px $primary-gold-one;
+  border-radius: 10px;
 }
 
 .card:hover {
+  box-shadow: none;
+  border: 3px solid $primary-gold-one;
   transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
@@ -38,7 +43,6 @@
 
 .title {
   color: white;
-  font-weight: 300;
   position: absolute;
   left: 20px;
   bottom: 0;
@@ -50,7 +54,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
   margin: 0;
