@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ChampionProfileComponent implements OnInit{
   champData: any;
+  showSpinner: boolean = true;
   constructor(
     private championsService: ChampionsService,
     readonly activatedRoute: ActivatedRoute
@@ -24,8 +25,10 @@ export class ChampionProfileComponent implements OnInit{
   getProfileChamp(championParamsId: string) {
     this.championsService.getChampionById(championParamsId).then(res => {
       this.champData = res.data();
+      this.showSpinner = false;
       console.log('champ: ', this.champData);
     }).catch(err => {
+      this.showSpinner = false;
       console.error('Error when tried to get champ by id', err);
     });
   }

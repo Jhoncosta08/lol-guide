@@ -1,6 +1,6 @@
 <div class="new-champion-container">
   <div class="champion-form-container">
-    <h1 class="page-title">Criação de campeão</h1>
+    <app-title-divisor [title]="'Criação'"></app-title-divisor>
     <form [formGroup]="championForm" (ngSubmit)="createChampionFormSubmit()" id="champion-form" autocomplete="off">
 
       <div class="row">

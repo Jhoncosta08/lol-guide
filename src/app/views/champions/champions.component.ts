@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
 })
 export class ChampionsComponent implements OnInit {
   championsList: any[] = [];
+  showSpinner: boolean = true;
   constructor(private championsService: ChampionsService, private route: Router) {}
 
   ngOnInit(): void {
@@ -19,9 +20,11 @@ export class ChampionsComponent implements OnInit {
     this.championsService.getChampionsList().subscribe({
       next: championsList => {
         this.championsList = championsList;
+        this.showSpinner = false;
         console.log('champ: ', championsList);
       },
       error: err => {
+        this.showSpinner = false;
         console.error('Error when tried to get champions list', err);
       }
     })

@@ -1,5 +1,10 @@
 <div class="champions-container container-fluid">
- <div class="row card-container">
+
+  <app-title-divisor [title]="'Campeões'"></app-title-divisor>
+
+  <app-gradient-spinner *ngIf="showSpinner"></app-gradient-spinner>
+
+ <div *ngIf="!showSpinner" class="row card-container">
 
    <div *ngFor="let champ of championsList" class="col-sm-4 card" (click)="redirectToChampPage(champ.id)">
      <figure class="card-thumbnail">

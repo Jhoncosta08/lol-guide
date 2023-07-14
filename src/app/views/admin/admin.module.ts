@@ -6,6 +6,7 @@ import { AdminComponent } from './admin.component';
 import { AddChampionComponent } from './add-champion/add-champion.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {DynamicButtonModule} from "../../shared/dynamic-buttons/dynamic-button.module";
+import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
 
 
 @NgModule({
@@ -13,12 +14,13 @@ import {DynamicButtonModule} from "../../shared/dynamic-buttons/dynamic-button.m
     AdminComponent,
     AddChampionComponent
   ],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    DynamicButtonModule
-  ]
+    imports: [
+        CommonModule,
+        AdminRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DynamicButtonModule,
+        TitleDivisorModule
+    ]
 })
 export class AdminModule { }

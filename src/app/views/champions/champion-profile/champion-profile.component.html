@@ -1,19 +1,23 @@
-<div *ngIf="champData" class="champ-container">
 
-  <div class="champ-name-container">
-    <h1>{{ champData.championName }}</h1>
-    <h2>{{ champData.championTitle }}</h2>
+
+<div class="champ-container">
+
+  <app-gradient-spinner *ngIf="showSpinner"></app-gradient-spinner>
+
+  <div *ngIf="champData && !showSpinner"  class="champ-box">
+    <div class="champ-name-container">
+      <h1>{{ champData.championName }}</h1>
+      <h2>{{ champData.championTitle }}</h2>
+    </div>
+
+    <div class="champ-img-container">
+      <img [src]="champData.championSplash" [alt]="champData.championName"/>
+    </div>
+
+    <div class="champ-description">
+      <p>{{ champData.championLore }}</p>
+    </div>
   </div>
-
-  <div class="champ-img-container">
-    <img [src]="champData.championSplash" [alt]="champData.championName"/>
-  </div>
-
-  <div class="champ-description">
-    <p>{{ champData.championLore }}</p>
-  </div>
-
-
 
 </div>
 
