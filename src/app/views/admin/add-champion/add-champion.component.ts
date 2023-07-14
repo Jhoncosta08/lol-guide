@@ -57,7 +57,8 @@ export class AddChampionComponent {
         w: new FormGroup(this.buildDefaultSkillFormValues()),
         e: new FormGroup(this.buildDefaultSkillFormValues()),
         r: new FormGroup(this.buildDefaultSkillFormValues()),
-      })
+      }),
+      championDifficulty: ['Dificuldade do campeão:', Validators.required]
     });
   }
 
