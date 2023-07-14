@@ -22,7 +22,7 @@
         <div class="form-group">
           <div class="input-group mb-3 input-container">
             <span class="input-group-text login-icon" id="password-icon"><i class="bi bi-lock email-password-icon"></i></span>
-            <input id="login-password" class="form-control login-input" name="password" [type]="showPassword ? 'text' : 'password'" required  placeholder="Password" minlength="6" ngModel/>
+            <input id="login-password" class="form-control login-input" name="password" [type]="showPassword ? 'text' : 'password'" required  placeholder="Senha" minlength="6" ngModel/>
             <span class="input-group-text login-icon" id="password-eye-icons" (click)="switchShowPasswordIcon()">
               <i *ngIf="!showPassword" class="bi bi-eye show-password-icon"></i>
               <i *ngIf="showPassword" class="bi bi-eye-slash show-password-icon"></i>
