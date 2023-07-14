@@ -1,9 +1,21 @@
-<div *ngIf="champData" class="container">
-  <div class="test">
-    <p><img [src]="champData.championIcon" [alt]="champData.championName"/> --- {{ champData.championName }}</p>
-    <p>{{ champData.championTitle }}</p>
+<div *ngIf="champData" class="champ-container">
+
+  <div class="champ-name-container">
+    <h1>{{ champData.championName }}</h1>
+    <h2>{{ champData.championTitle }}</h2>
+  </div>
+
+  <div class="champ-img-container">
     <img [src]="champData.championSplash" [alt]="champData.championName"/>
+  </div>
+
+  <div class="champ-description">
     <p>{{ champData.championLore }}</p>
   </div>
+
+  <div class="champ-icon-divisor">
+    <img [src]="champData.championIcon" [alt]="champData.championName"/>
+  </div>
+
 </div>
 

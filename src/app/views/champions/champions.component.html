@@ -1,10 +1,12 @@
 <div class="champions-container container-fluid">
  <div class="row card-container">
+
    <div *ngFor="let champ of championsList" class="col-sm-4 card" (click)="redirectToChampPage(champ.id)">
      <figure class="card-thumbnail">
        <img [src]="champ.championSplash" [alt]="champ.championName">
      </figure>
      <h3 class="title">{{ champ.championName }}</h3>
    </div>
+
  </div>
 </div>

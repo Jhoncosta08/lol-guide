@@ -1,0 +1,36 @@
+@use "src/custom-theme" as *;
+
+.dashboard-container {
+  width: 100%;
+  height: 100%;
+  min-height: 91.2vh;
+  background-color: $secondary-blue-dark;
+}
+
+.main-screen-container {
+  text-align: center;
+}
+
+.dashboard-title {
+  padding: 2rem 0 2rem 0;
+  color: $primary-gold-one;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+#dashboard-video {
+  width: 50%;
+  border: 3px solid $secondary-blue-two;
+}
+
+.dashboard-description {
+  margin-top: 4%;
+  color: $primary-gold-one;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-weight: 400;
+}
+

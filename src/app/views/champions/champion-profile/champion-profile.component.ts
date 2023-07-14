@@ -17,7 +17,7 @@ export class ChampionProfileComponent implements OnInit{
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       if (!params) return;
-      this.getProfileChamp(params['id'])
+      this.getProfileChamp(params['id']);
     });
   }
 
@@ -26,7 +26,7 @@ export class ChampionProfileComponent implements OnInit{
       this.champData = res.data();
       console.log('champ: ', this.champData);
     }).catch(err => {
-      console.error('Error when tried to get champ by id', err)
+      console.error('Error when tried to get champ by id', err);
     });
   }
 
