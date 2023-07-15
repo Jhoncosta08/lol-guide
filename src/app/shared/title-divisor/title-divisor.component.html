@@ -3,11 +3,13 @@
     <h1>{{ title }}</h1>
   </div>
 
-  <div class="title-divisor">
-    <span></span>
-  </div>
+  <section class="seperator-wrapper">
+    <div class="seperator gradient"></div>
+  </section>
 
   <div *ngIf="showSearch">
     <input (keyup)="sendInputText($event)" type="text" placeholder="Digite o nome do campeão...">
   </div>
 </div>
+
+

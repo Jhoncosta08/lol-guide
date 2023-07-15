@@ -26,7 +26,7 @@ export class ChampionProfileComponent implements OnInit{
       this.champData = res.data();
       this.getChampionLanes();
       this.showSpinner = false;
-      console.log('champ: ', this.champData);
+      // console.log('champ: ', this.champData);
     }).catch(err => {
       this.showSpinner = false;
       console.error('Error when tried to get champ by id', err);

@@ -1,0 +1,52 @@
+@use "src/custom-theme" as *;
+
+.skill-container {
+  height: 100%;
+  min-height: 500px;
+}
+
+.skill-son-container img {
+  margin: 2rem;
+  border: 2px solid $secondary-blue-two;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+}
+
+.skill-son-container img:hover {
+  border-color: $primary-gold-one;
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+
+.skill-son-container img:hover ~ .skill-son-container img{
+  position: relative;
+  transition: 0.4s ease-out;
+}
+
+.active-skill {
+  border: 2px solid $primary-gold-one !important;
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+
+.skill-text-container {
+  text-align: left;
+  padding: 2rem;
+  color: $primary-gold-one;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.skill-name {
+  color: $secondary-blue-two;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.skill-video {
+  border: 2px solid $primary-gold-one;
+}
+
+.skill-video-container, .skill-video {
+  width: 70%;
+}
