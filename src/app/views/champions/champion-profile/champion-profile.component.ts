@@ -11,10 +11,8 @@ export class ChampionProfileComponent implements OnInit{
   champData: any;
   showSpinner: boolean = true;
   championLanes: string[] = [];
-  constructor(
-    private championsService: ChampionsService,
-    readonly activatedRoute: ActivatedRoute
-  ) {}
+
+  constructor(private championsService: ChampionsService, readonly activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
@@ -23,7 +21,7 @@ export class ChampionProfileComponent implements OnInit{
     });
   }
 
-  getProfileChamp(championParamsId: string) {
+  getProfileChamp(championParamsId: string): void {
     this.championsService.getChampionById(championParamsId).then(res => {
       this.champData = res.data();
       this.getChampionLanes();
@@ -35,10 +33,9 @@ export class ChampionProfileComponent implements OnInit{
     });
   }
 
-  getChampionLanes() {
+  getChampionLanes(): void {
     const champDataLane = this.champData?.championLanes;
     const championLanes = this.championLanes;
-
     const laneCategories = ['top', 'mage', 'adc', 'jungle', 'support'];
     for (const lane of laneCategories) {
       if (champDataLane[lane] && !championLanes.includes(champDataLane[lane])) {

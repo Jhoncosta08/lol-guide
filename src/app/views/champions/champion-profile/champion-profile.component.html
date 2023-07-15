@@ -1,10 +1,8 @@
-
-
 <div class="champ-container">
-
   <app-gradient-spinner *ngIf="showSpinner"></app-gradient-spinner>
 
   <div *ngIf="champData && !showSpinner"  class="champ-box">
+
     <div class="champ-name-container">
       <h1>{{ champData.championName }}</h1>
       <h2>{{ champData.championTitle }}</h2>
@@ -20,18 +18,13 @@
 
     <div class="row lane-container">
       <div class="col-sm lane-box">
-
         <div class="row">
           <p class="function-title">Função</p>
-
           <div *ngFor="let lane of championLanes" class="col-sm">
             <img class="lane-icon" [src]="checkIconLane(lane)" [alt]="lane">
             <p class="function-value">{{ lane }}</p>
           </div>
-
         </div>
-
-
       </div>
 
       <div class="col-sm icon-box">
@@ -41,7 +34,6 @@
       <div class="col-sm difficulty-box">
         <div class="row">
           <p class="function-title">Dificuldade</p>
-
           <div class="row df-row">
             <div class="col-sm df-container">
               <div [ngClass]="champData.championDifficulty === 'Fácil' ? 'active' : ''" class="df-box"></div>
@@ -49,15 +41,19 @@
               <div [ngClass]="champData.championDifficulty === 'Difícil' ? 'active' : ''" class="df-box"></div>
             </div>
           </div>
-
           <div class="col-sm">
             <p class="function-value">Moderado</p>
           </div>
-
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="skills-container">
+      <app-title-divisor [title]="'Habilidades'"></app-title-divisor>
+    </div>
+
+
+
+  </div>
 </div>
 
