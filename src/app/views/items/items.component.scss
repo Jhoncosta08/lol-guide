@@ -1,0 +1,8 @@
+@use "src/custom-theme" as *;
+
+.items-container {
+  min-height: 91.2vh;
+  width: 100%;
+  padding-top: 20px;
+  background-color: $secondary-blue-dark;
+}

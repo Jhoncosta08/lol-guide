@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ItemsRoutingModule } from './items-routing.module';
 import {ItemsComponent} from "./items.component";
+import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {ItemsComponent} from "./items.component";
   ],
   imports: [
     CommonModule,
-    ItemsRoutingModule
+    ItemsRoutingModule,
+    TitleDivisorModule
   ]
 })
 export class ItemsModule { }
