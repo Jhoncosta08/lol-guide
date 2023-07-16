@@ -5,20 +5,20 @@
   min-height: 500px;
 }
 
-.skill-son-container img {
+.skill-icon-container img {
   margin: 2rem;
   border: 2px solid $secondary-blue-two;
   cursor: pointer;
   transition: 0.4s ease-out;
 }
 
-.skill-son-container img:hover {
+.skill-icon-container img:hover {
   border-color: $primary-gold-one;
   transform: translateY(-10px);
   transition: 0.4s ease-out;
 }
 
-.skill-son-container img:hover ~ .skill-son-container img{
+.skill-icon-container img:hover ~ .skill-icon-container img{
   position: relative;
   transition: 0.4s ease-out;
 }
@@ -43,10 +43,10 @@
   padding: 0;
 }
 
-.skill-video {
-  border: 2px solid $primary-gold-one;
+.skill-video-container, .skill-video {
+  width: 70%;
 }
 
-.skill-video-container, .skill-video {
+.video-default-img {
   width: 70%;
 }

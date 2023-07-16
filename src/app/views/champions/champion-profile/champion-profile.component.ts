@@ -59,7 +59,7 @@ export class ChampionProfileComponent implements OnInit{
       case "Selva":
         iconLane = `${iconLane}/jungle.png`;
         break;
-      case "Support":
+      case "Suporte":
         iconLane = `${iconLane}/support.png`;
         break;
     }

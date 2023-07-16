@@ -3,7 +3,7 @@
 
     <div class="col-sm">
 
-      <div class="skill-son-container">
+      <div class="skill-icon-container">
         <img [src]="this.championSkills.passive.skillImage"
              [alt]="this.championSkills.passive.skillName"
              [ngClass]="{'active-skill ': activeSkill === 'passive'}"
@@ -43,23 +43,25 @@
     </div>
 
     <div class="col-sm skill-video-container">
-      <video *ngIf="activeSkill === 'passive'" [autoplay]="true" [muted]="true" loop class="skill-video box">
+      <img class="video-default-img" *ngIf="showDefaultImg" src="assets/img/no-video.png" [alt]="this.championSkills[activeSkill].skillName">
+
+      <video *ngIf="activeSkill === 'passive' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
         <source [src]="this.championSkills.passive.skillVideo" type="video/mp4">
       </video>
 
-      <video *ngIf="activeSkill === 'q'" [autoplay]="true" [muted]="true" loop class="skill-video box">
+      <video *ngIf="activeSkill === 'q' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
         <source [src]="this.championSkills.q.skillVideo" type="video/mp4">
       </video>
 
-      <video *ngIf="activeSkill === 'w'" [autoplay]="true" [muted]="true" loop class="skill-video box">
+      <video *ngIf="activeSkill === 'w' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
         <source [src]="this.championSkills.w.skillVideo" type="video/mp4">
       </video>
 
-      <video *ngIf="activeSkill === 'e'" [autoplay]="true" [muted]="true" loop class="skill-video box">
+      <video *ngIf="activeSkill === 'e' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
         <source [src]="this.championSkills.e.skillVideo" type="video/mp4">
       </video>
 
-      <video *ngIf="activeSkill === 'r'" [autoplay]="true" [muted]="true" loop class="skill-video box">
+      <video *ngIf="activeSkill === 'r' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
         <source [src]="this.championSkills.r.skillVideo" type="video/mp4">
       </video>
     </div>
