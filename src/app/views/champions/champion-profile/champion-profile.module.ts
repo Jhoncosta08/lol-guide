@@ -4,6 +4,7 @@ import { ChampionProfileComponent } from './champion-profile.component';
 import {GradientSpinnerModule} from "../../../shared/gradient-spinner/gradient-spinner.module";
 import {TitleDivisorModule} from "../../../shared/title-divisor/title-divisor.module";
 import {ChampionSkillsModule} from "./champion-skills/champion-skills.module";
+import {ChampionSkinsModule} from "./champion-skins/champion-skins.module";
 
 
 
@@ -15,7 +16,8 @@ import {ChampionSkillsModule} from "./champion-skills/champion-skills.module";
       CommonModule,
       GradientSpinnerModule,
       TitleDivisorModule,
-      ChampionSkillsModule
+      ChampionSkillsModule,
+      ChampionSkinsModule
     ]
 })
 export class ChampionProfileModule { }

@@ -1,0 +1,24 @@
+<div class="champion-skins-container">
+
+    <div class="skins-gallery-container">
+
+      <div class="skin-name-container">
+        <p>{{ activeSkinName === 'default' ? championName : activeSkinName }}</p>
+      </div>
+
+      <div class="highlight-image">
+        <img [src]="activeSkinUrl" [alt]="activeSkinName">
+      </div>
+
+      <div class="thumb-img">
+        <img *ngFor="let skin of championSkins"
+             [ngClass]="{'active-thumb': skin.skinUrl === activeSkinUrl}"
+             [src]="skin.skinUrl"
+             [alt]="skin.skinName"
+             (click)="changeActiveSkin(skin.skinName, skin.skinUrl)"
+        />
+      </div>
+
+    </div>
+
+</div>
