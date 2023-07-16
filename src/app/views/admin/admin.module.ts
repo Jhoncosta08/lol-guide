@@ -7,12 +7,14 @@ import { AddChampionComponent } from './add-champion/add-champion.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {DynamicButtonModule} from "../../shared/dynamic-buttons/dynamic-button.module";
 import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
+import {AddRuneComponent} from "./add-rune/add-rune.component";
 
 
 @NgModule({
   declarations: [
     AdminComponent,
-    AddChampionComponent
+    AddChampionComponent,
+    AddRuneComponent
   ],
     imports: [
         CommonModule,

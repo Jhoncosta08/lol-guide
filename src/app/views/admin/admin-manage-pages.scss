@@ -1,6 +1,6 @@
 @use "src/custom-theme" as *;
 
-.new-champion-container {
+.new-champion-container, .rune-page-container, .item-page-container {
   width: 100%;
   min-height: 91.2vh;
   display: flex;
@@ -16,7 +16,7 @@
   color: $primary-gold-three;
 }
 
-.champion-form-container {
+.champion-form-container, .rune-form-container, .item-form-container {
   width: 100%;
   height: auto;
 }
@@ -27,7 +27,7 @@
   align-items: center;
 }
 
-#champion-form small {
+#champion-form small, #rune-form small, #item-form small {
   color: $secondary-blue-two;
 }
 
@@ -61,6 +61,14 @@
   color: $grey-one;
 }
 
+#rune-form .manage-input::placeholder, .manage-input, select, textarea {
+  color: $grey-one;
+}
+
+#item-form .manage-input::placeholder, .manage-input, select, textarea {
+  color: $grey-one;
+}
+
 .textarea-container {
   border: 1px solid $primary-gold-one;
   margin: 2.188rem 0 0 0.188rem;
@@ -71,6 +79,14 @@
 }
 
 #champion-form .textarea-input::placeholder, .textarea-input, select, textarea {
+  color: $grey-one;
+}
+
+#rune-form .textarea-input::placeholder, .textarea-input, select, textarea {
+  color: $grey-one;
+}
+
+#item-form .textarea-input::placeholder, .textarea-input, select, textarea {
   color: $grey-one;
 }
 
