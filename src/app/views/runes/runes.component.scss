@@ -5,4 +5,119 @@
   width: 100%;
   padding-top: 20px;
   background-color: $secondary-blue-dark;
+  text-align: center;
+}
+
+.runes-box {
+  margin: 10px;
+  height: 100%;
+  min-height: 65vh;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid $primary-gold-one;
+  transition: 0.4s ease-out;
+}
+
+.runes-box:hover {
+  border-color: $secondary-blue-two;
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+
+.runes-box:hover ~ .runes-box{
+  position: relative;
+  transition: 0.4s ease-out;
+}
+
+.runes-box:hover > .feitiçaria {
+  border-color: $spell-rune;
+  color: $spell-rune;
+}
+
+.runes-box:hover > .precisão {
+  border-color: $precision-rune;
+  color: $precision-rune;
+}
+
+.runes-box:hover > .inspiração {
+  border-color: $inspiration-rune;
+  color: $inspiration-rune;
+}
+
+.runes-box:hover > .determinação {
+  border-color: $determination-rune;
+  color: $determination-rune;
+}
+
+.runes-box:hover > .dominação {
+  border-color: $domination-rune;
+  color: $domination-rune;
+}
+
+.rune-img {
+  border-radius: 50%;
+  width: 40%;
+  border: 3px solid $grey-one;
+  margin-top: 1.5rem;
+}
+
+.rune-name {
+  margin: 10px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $grey-one;
+}
+
+.rune-slogan {
+  font-size: 0.7rem;
+  color: $secondary-blue-three;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.main-runes {
+  margin-bottom: 1rem;
+}
+
+.main-runes .feitiçaria {
+  color: $spell-rune;
+}
+
+.main-runes .precisão {
+  color: $precision-rune;
+}
+
+.main-runes .inspiração {
+  color: $inspiration-rune;
+}
+
+.main-runes .determinação {
+  color: $determination-rune;
+}
+
+.main-runes .dominação {
+  color: $domination-rune;
+}
+
+.main-runes img {
+  width: 15%;
+}
+
+.main-rune-name {
+  font-size: 0.6rem;
+  color: $grey-one;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.main-rune-description {
+  padding-top: 10px;
+}
+
+.main-rune-description p {
+  font-size: 0.7rem;
+  color: $primary-gold-three;
+  letter-spacing: 2px;
+  text-transform: capitalize;
 }

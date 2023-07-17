@@ -22,7 +22,6 @@ export class RunesComponent implements OnInit {
       next: runeList => {
         this.runeList = runeList;
         this.showSpinner = false;
-        console.log('runes: ', runeList);
       },
       error: err => {
         this.showSpinner = false;
@@ -33,5 +32,9 @@ export class RunesComponent implements OnInit {
 
   redirectToRunePage(runeId: string) {
     void this.route.navigate([`runes/${runeId}`]);
+  }
+
+  setRuneClass(rune: string) {
+
   }
 }

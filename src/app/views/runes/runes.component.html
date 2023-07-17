@@ -1,5 +1,34 @@
 <div class="runes-container container-fluid">
 
   <app-title-divisor [title]="'Runas'"></app-title-divisor>
+    <div class="row">
+
+      <div *ngFor="let rune of runeList" class="col-sm runes-box" (click)="redirectToRunePage(rune.id)">
+        <img class="rune-img" [ngClass]="rune.runeName.toLowerCase()" [src]="rune.runeImage" [alt]="rune.runeName">
+        <p class="rune-name" [ngClass]="rune.runeName.toLowerCase()">{{ rune.runeName }}</p>
+        <p class="rune-slogan">{{ rune.runeSlogan }}</p>
+
+        <div class="main-runes">
+          <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.firstRune.firstRuneName}}</p>
+          <img [src]="rune.mainRune.firstRune.firstRuneImage" [alt]="rune.mainRune.firstRune.firstRuneName">
+        </div>
+
+        <div class="main-runes">
+          <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.secondRune.secondRuneName}}</p>
+          <img [src]="rune.mainRune.secondRune.secondRuneImage" [alt]="rune.mainRune.secondRune.secondRuneName">
+        </div>
+
+        <div class="main-runes">
+          <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.thirdRune.thirdRuneName}}</p>
+          <img [src]="rune.mainRune.thirdRune.thirdRuneImage" [alt]="rune.mainRune.thirdRune.thirdRuneName">
+        </div>
+
+        <div class="main-rune-description">
+          <p>{{ rune.runeDescription }}</p>
+        </div>
+
+      </div>
+
+    </div>
 
 </div>

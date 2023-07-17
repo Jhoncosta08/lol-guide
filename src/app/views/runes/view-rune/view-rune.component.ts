@@ -24,7 +24,6 @@ export class ViewRuneComponent implements OnInit {
     this.runeService.getRuneById(runeParamsId).then(res => {
       this.runesData = res.data();
       this.showSpinner = false;
-      console.log('runes: ', this.runesData);
     }).catch(err => {
       this.showSpinner = false;
       console.error('Error when tried to get champ by id', err);

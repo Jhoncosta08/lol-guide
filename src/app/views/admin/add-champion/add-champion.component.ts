@@ -32,7 +32,7 @@ export class AddChampionComponent {
       const params = { id: championDocId };
       void this.route.navigate([championDocPath], {queryParams: params })
     }).catch(err => {
-      console.log('Error when tried to set id', err);
+      console.error('Error when tried to set id', err);
     })
   }
 

@@ -21,7 +21,6 @@ export class ChampionsComponent implements OnInit {
       next: championsList => {
         this.championsList = championsList;
         this.showSpinner = false;
-        console.log('champ: ', championsList);
       },
       error: err => {
         this.showSpinner = false;

@@ -12,7 +12,6 @@ export class ChampionSkinsComponent implements OnInit {
   activeSkinName: string = '';
 
   ngOnInit(): void {
-    console.log('skins: ', this.championSkins);
     this.activeSkinUrl = this.championSkins[0].skinUrl;
     this.activeSkinName = this.championSkins[0].skinName;
   }

@@ -95,7 +95,7 @@ export class AddRuneComponent {
       const params = { id: runeDocId };
       void this.route.navigate([runeDocPath], {queryParams: params })
     }).catch(err => {
-      console.log('Error when tried to set id', err);
+      console.error('Error when tried to set id', err);
     })
   }
 
