@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RunesService} from "../../../services/runes.service";
 import {ActivatedRoute} from "@angular/router";
+import {main} from "@popperjs/core";
 
 @Component({
   selector: 'app-view-rune',
@@ -10,7 +11,8 @@ import {ActivatedRoute} from "@angular/router";
 export class ViewRuneComponent implements OnInit {
   rune: any;
   showSpinner: boolean = true;
-  activeRune: string = 'main-one'
+  activeRune: string = 'main-one';
+  runeDiretory: string = '';
 
   constructor(private runeService: RunesService, readonly activatedRoute: ActivatedRoute) {}
 
@@ -24,6 +26,7 @@ export class ViewRuneComponent implements OnInit {
   getRune(runeParamsId: string): void {
     this.runeService.getRuneById(runeParamsId).then(res => {
       this.rune = res.data();
+      this.getRuneDiretory();
       this.showSpinner = false;
       console.log('rune: ', this.rune);
     }).catch(err => {
@@ -65,6 +68,30 @@ export class ViewRuneComponent implements OnInit {
       case "main-three":
         this.activeRune = 'main-three';
         break;
+    }
+  }
+
+  getRuneDiretory(): void {
+    const mainRunePath = this.rune.runeName;
+    const mainRunesVideoPath = 'assets/videos/runes'
+    if(mainRunePath) {
+      switch (mainRunePath) {
+        case 'Feitiçaria':
+          this.runeDiretory = `${mainRunesVideoPath}/spell`
+          break;
+        case 'Precisão':
+          this.runeDiretory = `${mainRunesVideoPath}/precision`
+          break;
+        case 'Inspiração':
+          this.runeDiretory = `${mainRunesVideoPath}/inspiration`
+          break;
+        case 'Determinação':
+          this.runeDiretory = `${mainRunesVideoPath}/determination`
+          break;
+        case 'Dominação':
+          this.runeDiretory = `${mainRunesVideoPath}/domination`
+          break;
+      }
     }
   }
 

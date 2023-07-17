@@ -5,7 +5,7 @@
 
   <div *ngIf="!showSpinner" class="row rune-detail-container">
 
-    <div class="row">
+    <div class="row rune-info-row">
       <div class="col-sm">
         <img class="rune-image" [src]="rune.runeImage" [alt]="rune.runeName" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}"/>
         <p [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}" class="rune-detail-slogan">{{ rune.runeSlogan }}</p>
@@ -34,7 +34,19 @@
     </div>
 
     <div class="col-sm">
-      <p>video</p>
+
+
+      <video *ngIf="activeRune === 'main-one'" [autoplay]="true" [muted]="true" loop class="rune-video">
+        <source [src]="runeDiretory+'/rune-one.mp4'" type="video/mp4">
+      </video>
+
+      <video *ngIf="activeRune === 'main-two'" [autoplay]="true" [muted]="true" loop class="rune-video">
+        <source [src]="runeDiretory+'/rune-two.mp4'" type="video/mp4">
+      </video>
+
+      <video *ngIf="activeRune === 'main-three'" [autoplay]="true" [muted]="true" loop class="rune-video">
+        <source [src]="runeDiretory+'/rune-three.mp4'" type="video/mp4">
+      </video>
     </div>
 
   </div>
