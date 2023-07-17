@@ -1,18 +1,53 @@
-<div class="container-fluid">
-  <div class="row">
+<div class="admin-dashboard-container container-fluid">
+  <app-title-divisor [title]="'Admin'"></app-title-divisor>
 
-    <div class="col-sm">
-      <a routerLink="new-champion">Novo campeão</a>
+  <div class="row admin-dashboard-row">
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/new-champion')">
+      <p>Novo campeão</p>
     </div>
 
-    <div class="col-sm">
-      <a routerLink="new-rune">Nova runa</a>
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/new-rune')">
+      <p>Nova runa</p>
     </div>
 
-    <div class="col-sm">
-      <a routerLink="new-item">Novo item</a>
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/new-item')">
+      <p>Novo item</p>
     </div>
 
   </div>
+
+  <div class="row admin-dashboard-row">
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/update-champion')">
+      <p>Editar campeão</p>
+    </div>
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/update-rune')">
+      <p>Editar runa</p>
+    </div>
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/update-item')">
+      <p>Editar item</p>
+    </div>
+
+  </div>
+
+  <div class="row admin-dashboard-row">
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/add-rune-to-champion')">
+      <p>Atribuir runa ao campeão</p>
+    </div>
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/add-item-to-champion')">
+      <p>Atribuir item ao campeão</p>
+    </div>
+
+    <div class="col-sm admin-action-container" (click)="redirectToUrl('admin/delete-item')">
+      <p>Excluir item</p>
+    </div>
+
+  </div>
+
 </div>
 

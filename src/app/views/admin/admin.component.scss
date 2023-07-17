@@ -1,0 +1,50 @@
+@use "src/custom-theme" as *;
+
+
+.admin-dashboard-container {
+  width: 100%;
+  min-height: 91.2vh;
+  padding: 20px;
+  background-color: $secondary-blue-dark;
+  text-align: center;
+}
+
+.admin-dashboard-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-action-container {
+  width: 100%;
+  height: auto;
+  border: 2px solid $primary-gold-one;
+  padding: 20px;
+  margin: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease-out;
+}
+
+.admin-action-container:hover {
+  border-color: $secondary-blue-two;
+  transition: 0.4s ease-out;
+  transform: translateY(-10px);
+}
+
+.admin-action-container:hover ~ .admin-action-container {
+  transition: 0.4s ease-out;
+}
+
+.admin-action-container:hover > p {
+  color: $primary-gold-one;
+}
+
+.admin-action-container p {
+  color: $primary-gold-three;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
