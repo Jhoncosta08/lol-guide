@@ -8,13 +8,19 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {DynamicButtonModule} from "../../shared/dynamic-buttons/dynamic-button.module";
 import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
 import {AddRuneComponent} from "./add-rune/add-rune.component";
+import { AddRuneChampionComponent } from './add-rune-champion/add-rune-champion.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { AddChampionItemComponent } from './add-champion-item/add-champion-item.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     AddChampionComponent,
-    AddRuneComponent
+    AddRuneComponent,
+    AddRuneChampionComponent,
+    AddItemComponent,
+    AddChampionItemComponent
   ],
     imports: [
         CommonModule,
