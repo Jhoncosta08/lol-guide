@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptor} from "./services/interceptors/token.interceptor";
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {HeaderModule} from "./shared/header/header.module";
+import {getAuth, provideAuth} from "@angular/fire/auth";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HeaderModule} from "./shared/header/header.module";
     HttpClientModule,
     HeaderModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideAuth(() => getAuth(initializeApp(environment.firebase))),
+    provideFirestore(() => getFirestore(initializeApp(environment.firebase)))
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}],
   bootstrap: [AppComponent]
