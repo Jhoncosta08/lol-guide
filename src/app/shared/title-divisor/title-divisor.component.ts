@@ -7,6 +7,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 })
 export class TitleDivisorComponent {
   @Input({required: true}) title: string = 'Title';
+  @Input() colorTitle: string = '';
   @Input() showSearch: boolean = false;
   @Output() sendInput: EventEmitter<string> = new EventEmitter<string>();
 

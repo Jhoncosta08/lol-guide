@@ -1,0 +1,65 @@
+@use "src/custom-theme" as *;
+
+.rune-container {
+  min-height: 91.2vh;
+  width: 100%;
+  padding-top: 20px;
+  background-color: $secondary-blue-dark;
+  text-align: center;
+}
+
+.rune-detail-container {
+  width: 100%;
+  height: 100%;
+  min-height: 60vh;
+}
+
+.rune-image {
+  border-radius: 50%;
+  width: 10%;
+  border: 3px solid;
+}
+
+.rune-detail-slogan {
+  letter-spacing: 2px;
+  margin: 0.4rem 0 0 0;
+  font-size: 2rem;
+}
+
+.rune-detail-description {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: $grey-one;
+}
+
+.main-rune-container img  {
+  width: 9%;
+}
+
+.main-rune-one, .main-rune-two, .main-rune-three {
+  margin: 0 0 3rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.3;
+  p {
+    margin: 0 0 0 1rem;
+  }
+
+  .main-rune-name {
+    text-align: left;
+    min-width: 15%;
+  }
+
+  .main-rune-description {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: $grey-one;
+    text-align: left;
+  }
+}
+
+.active-rune {
+  opacity: 1;
+}

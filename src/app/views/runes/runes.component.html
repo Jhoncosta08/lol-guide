@@ -2,7 +2,7 @@
 
   <app-title-divisor [title]="'Runas'"></app-title-divisor>
   <app-gradient-spinner *ngIf="showSpinner"></app-gradient-spinner>
-    <div class="row">
+    <div *ngIf="!showSpinner" class="row">
 
       <div *ngFor="let rune of runeList" class="col-sm runes-box" [ngClass]="rune.runeName.toLowerCase()+'-box'" (click)="redirectToRunePage(rune.id)">
         <img class="rune-img" [ngClass]="rune.runeName.toLowerCase()" [src]="rune.runeImage" [alt]="rune.runeName">

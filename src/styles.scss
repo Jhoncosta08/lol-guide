@@ -6,6 +6,10 @@
 
 /*START CHANGE DEFAULT BOOTSTRAP STYLES*/
 
+.row {
+  margin: 0 !important;
+}
+
 button:focus,
 button:active,
 button:hover,

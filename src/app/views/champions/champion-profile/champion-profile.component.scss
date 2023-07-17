@@ -57,7 +57,7 @@ p {
   padding: 20px;
   display: flex;
   align-items: center;
-  margin: auto;
+  margin: auto !important;
   border: 1px solid $secondary-blue-two;
 }
 

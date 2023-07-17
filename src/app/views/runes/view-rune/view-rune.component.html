@@ -1,1 +1,41 @@
-<p>view-rune works!</p>
+<div class="rune-container container-fluid">
+
+  <app-title-divisor *ngIf="!showSpinner" [title]="rune.runeName" [colorTitle]="setRuneColor(rune.runeName.toLowerCase())"></app-title-divisor>
+  <app-gradient-spinner *ngIf="showSpinner"></app-gradient-spinner>
+
+  <div *ngIf="!showSpinner" class="row rune-detail-container">
+
+    <div class="row">
+      <div class="col-sm">
+        <img class="rune-image" [src]="rune.runeImage" [alt]="rune.runeName" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}"/>
+        <p [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}" class="rune-detail-slogan">{{ rune.runeSlogan }}</p>
+        <p class="rune-detail-description">{{ rune.runeDescription}}</p>
+      </div>
+    </div>
+
+    <div class="col-sm main-rune-container">
+      <div [ngClass]="{'active-rune ': activeRune === 'main-one'}" class="main-rune-one" (click)="changeActiveMainRune('main-one')">
+        <img [src]="rune.mainRune.firstRune.firstRuneImage" [alt]="rune.mainRune.firstRune.firstRuneName" />
+        <p class="main-rune-name" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.mainRune.firstRune.firstRuneName }}:</p>
+        <p class="main-rune-description">{{ rune.mainRune.firstRune.firstRuneDescription }}</p>
+      </div>
+
+      <div [ngClass]="{'active-rune ': activeRune === 'main-two'}" class="main-rune-two" (click)="changeActiveMainRune('main-two')">
+        <img [src]="rune.mainRune.secondRune.secondRuneImage" [alt]="rune.mainRune.secondRune.secondRuneName" />
+        <p class="main-rune-name" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.mainRune.secondRune.secondRuneName }}:</p>
+        <p class="main-rune-description">{{ rune.mainRune.secondRune.secondRuneDescription }}</p>
+      </div>
+
+      <div [ngClass]="{'active-rune ': activeRune === 'main-three'}" class="main-rune-three" (click)="changeActiveMainRune('main-three')">
+        <img [src]="rune.mainRune.thirdRune.thirdRuneImage" [alt]="rune.mainRune.thirdRune.thirdRuneName" />
+        <p class="main-rune-name" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.mainRune.thirdRune.thirdRuneName }}:</p>
+        <p class="main-rune-description">{{ rune.mainRune.thirdRune.thirdRuneDescription}}</p>
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <p>video</p>
+    </div>
+
+  </div>
+</div>

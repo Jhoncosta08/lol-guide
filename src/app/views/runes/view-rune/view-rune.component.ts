@@ -8,8 +8,9 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./view-rune.component.scss']
 })
 export class ViewRuneComponent implements OnInit {
-  runesData: any;
+  rune: any;
   showSpinner: boolean = true;
+  activeRune: string = 'main-one'
 
   constructor(private runeService: RunesService, readonly activatedRoute: ActivatedRoute) {}
 
@@ -22,12 +23,49 @@ export class ViewRuneComponent implements OnInit {
 
   getRune(runeParamsId: string): void {
     this.runeService.getRuneById(runeParamsId).then(res => {
-      this.runesData = res.data();
+      this.rune = res.data();
       this.showSpinner = false;
+      console.log('rune: ', this.rune);
     }).catch(err => {
       this.showSpinner = false;
       console.error('Error when tried to get champ by id', err);
     });
+  }
+
+  setRuneColor(runeName: string): string {
+    let runeColor: string = '';
+    switch (runeName) {
+      case 'feitiçaria':
+        runeColor = '#9faafc';
+        break;
+      case 'precisão':
+        runeColor = '#c8aa6e';
+        break;
+      case 'inspiração':
+        runeColor = '#49aab9';
+        break;
+      case 'determinação':
+        runeColor = '#a1d586';
+        break;
+      case 'dominação':
+        runeColor = '#d44242';
+        break;
+    }
+    return runeColor;
+  }
+
+  changeActiveMainRune(mainRune: 'main-one' | 'main-two' | 'main-three'): void {
+    switch (mainRune) {
+      case "main-one":
+        this.activeRune = 'main-one';
+        break;
+      case "main-two":
+        this.activeRune = 'main-two';
+        break;
+      case "main-three":
+        this.activeRune = 'main-three';
+        break;
+    }
   }
 
 }
