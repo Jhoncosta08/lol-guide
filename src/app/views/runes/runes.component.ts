@@ -34,7 +34,5 @@ export class RunesComponent implements OnInit {
     void this.route.navigate([`runes/${runeId}`]);
   }
 
-  setRuneClass(rune: string) {
 
-  }
 }

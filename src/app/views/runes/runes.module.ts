@@ -5,6 +5,7 @@ import { RunesRoutingModule } from './runes-routing.module';
 import {RunesComponent} from "./runes.component";
 import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
 import {ViewRuneModule} from "./view-rune/view-rune.module";
+import {GradientSpinnerModule} from "../../shared/gradient-spinner/gradient-spinner.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {ViewRuneModule} from "./view-rune/view-rune.module";
     CommonModule,
     RunesRoutingModule,
     TitleDivisorModule,
-    ViewRuneModule
+    ViewRuneModule,
+    GradientSpinnerModule
   ]
 })
 export class RunesModule { }
