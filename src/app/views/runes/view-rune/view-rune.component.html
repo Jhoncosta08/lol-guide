@@ -47,5 +47,61 @@
       </video>
     </div>
 
+    <div class="row sub-runes-container" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}">
+      <div class="row">
+        <div class="col-sm">
+          <h2 [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">Runas inferiores</h2>
+        </div>
+      </div>
+
+      <div class="col-sm sub-group-rune-container" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}">
+        <h3 class="sub-runes-group-title">Primeiro grupo de runas inferiores</h3>
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.firstSlot.subRuneOne.runeName }}</p>
+        <img [src]="rune.firstSlot.subRuneOne.runeImage" [alt]="rune.firstSlot.subRuneOne.runeName">
+        <p class="sub-rune-description">{{ rune.firstSlot.subRuneOne.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.firstSlot.subRuneTwo.runeName }}</p>
+        <img [src]="rune.firstSlot.subRuneTwo.runeImage" [alt]="rune.firstSlot.subRuneTwo.runeName">
+        <p class="sub-rune-description">{{ rune.firstSlot.subRuneTwo.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.firstSlot.subRuneThree.runeName }}</p>
+        <img [src]="rune.firstSlot.subRuneThree.runeImage" [alt]="rune.firstSlot.subRuneThree.runeName">
+        <p class="sub-rune-description">{{ rune.firstSlot.subRuneThree.runeDescription}}</p>
+      </div>
+
+
+      <div class="col-sm sub-group-rune-container" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}">
+        <h3 class="sub-runes-group-title">Segundo grupo de runas inferiores</h3>
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.secondSlot.subRuneOne.runeName }}</p>
+        <img [src]="rune.secondSlot.subRuneOne.runeImage" [alt]="rune.secondSlot.subRuneOne.runeName">
+        <p class="sub-rune-description">{{ rune.secondSlot.subRuneOne.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.secondSlot.subRuneTwo.runeName }}</p>
+        <img [src]="rune.secondSlot.subRuneTwo.runeImage" [alt]="rune.secondSlot.subRuneTwo.runeName">
+        <p class="sub-rune-description">{{ rune.secondSlot.subRuneTwo.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.secondSlot.subRuneThree.runeName }}</p>
+        <img [src]="rune.secondSlot.subRuneThree.runeImage" [alt]="rune.secondSlot.subRuneThree.runeName">
+        <p class="sub-rune-description">{{ rune.secondSlot.subRuneThree.runeDescription}}</p>
+      </div>
+
+
+      <div class="col-sm sub-group-rune-container" [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}">
+        <h3 class="sub-runes-group-title">Terceiro grupo de runas inferiores</h3>
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.thirdSlot.subRuneOne.runeName }}</p>
+        <img [src]="rune.thirdSlot.subRuneOne.runeImage" [alt]="rune.thirdSlot.subRuneOne.runeName">
+        <p class="sub-rune-description">{{ rune.thirdSlot.subRuneOne.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.thirdSlot.subRuneTwo.runeName }}</p>
+        <img [src]="rune.thirdSlot.subRuneTwo.runeImage" [alt]="rune.thirdSlot.subRuneTwo.runeName">
+        <p class="sub-rune-description">{{ rune.thirdSlot.subRuneTwo.runeDescription}}</p>
+
+        <p class="sub-rune-title" [ngStyle]="{'color': setRuneColor(rune.runeName.toLowerCase())}">{{ rune.thirdSlot.subRuneThree.runeName }}</p>
+        <img [src]="rune.thirdSlot.subRuneThree.runeImage" [alt]="rune.thirdSlot.subRuneThree.runeName">
+        <p class="sub-rune-description">{{ rune.thirdSlot.subRuneThree.runeDescription}}</p>
+      </div>
+
+    </div>
+
   </div>
 </div>
