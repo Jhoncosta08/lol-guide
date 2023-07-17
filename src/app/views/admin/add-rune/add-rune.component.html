@@ -1,10 +1,12 @@
 <div class="container-fluid rune-page-container">
   <div class="rune-form-container">
-
     <app-title-divisor [title]="'Criação'"></app-title-divisor>
-    <form [formGroup]="runeForm" id="rune-form" autocomplete="off">
-
+    <form [formGroup]="runeForm" id="rune-form" (ngSubmit)="onSubmitRuneForm()" autocomplete="off">
       <div class="row">
+
+
+
+        <!--START RUNE CATEGORY-->
         <div class="col-sm">
           <h2 class="page-sub-title">Runa principal</h2>
 
@@ -33,11 +35,15 @@
           </div>
 
         </div>
+        <!--END RUNE CATEGORY-->
 
-        <div class="col-sm">
+
+        <!--START MAIN CATEGORY-->
+        <div class="col-sm" formGroupName="mainRune">
           <h2 class="page-sub-title">Slot principal</h2>
 
-          <div class="skins-array-container">
+
+          <div class="skins-array-container" formGroupName="firstRune">
             <small>Slot: 1</small>
             <div class="form-group">
               <div class="input-group mb-3 input-container">
@@ -64,7 +70,7 @@
             </div>
           </div>
 
-          <div class="skins-array-container">
+          <div class="skins-array-container" formGroupName="secondRune">
             <small>Slot: 2</small>
             <div class="form-group">
               <div class="input-group mb-3 input-container">
@@ -91,7 +97,7 @@
             </div>
           </div>
 
-          <div class="skins-array-container">
+          <div class="skins-array-container" formGroupName="thirdRune">
             <small>Slot: 3</small>
             <div class="form-group">
               <div class="input-group mb-3 input-container">
@@ -119,74 +125,212 @@
           </div>
 
         </div>
+        <!--END MAIN CATEGORY-->
 
-        <div class="col-sm">
+
+        <!--START FIRST RUNE SLOT-->
+        <div class="col-sm" formGroupName="firstSlot">
           <h2 class="page-sub-title">Slot 1</h2>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-one-name" class="form-control manage-input" name="runeOneName" formControlName="runeOneName" type="text" required placeholder="Nome da runa"/>
+          <div class="skins-array-container" formGroupName="subRuneOne">
+            <small>Slot: 1</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
+            </div>
+          </div>
+          <div class="skins-array-container" formGroupName="subRuneTwo">
+            <small>Slot: 2</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
+            </div>
+          </div>
+          <div class="skins-array-container" formGroupName="subRuneThree">
+            <small>Slot: 3</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
             </div>
           </div>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-one-description" class="form-control manage-input" name="runeOneDescription" formControlName="runeOneDescription" type="text" required placeholder="Descrição da runa"/>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-one-image" class="form-control manage-input" name="runeOneImage" formControlName="runeOneImage" type="text" required placeholder="Imagem da runa"/>
-            </div>
-          </div>
         </div>
+        <!--END FIRST RUNE SLOT-->
 
-        <div class="col-sm">
+
+        <!--START SECOND RUNE SLOT-->
+        <div class="col-sm" formGroupName="secondSlot">
           <h2 class="page-sub-title">Slot 2</h2>
+          <div class="skins-array-container" formGroupName="subRuneOne">
+            <small>Slot: 1</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-two-name" class="form-control manage-input" name="runeTwoName" formControlName="runeTwoName" type="text" required placeholder="Nome da runa"/>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
             </div>
           </div>
+          <div class="skins-array-container" formGroupName="subRuneTwo">
+            <small>Slot: 2</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-two-description" class="form-control manage-input" name="runeTwoDescription" formControlName="runeTwoDescription" type="text" required placeholder="Descrição da runa"/>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
             </div>
           </div>
+          <div class="skins-array-container" formGroupName="subRuneThree">
+            <small>Slot: 3</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-two-image" class="form-control manage-input" name="runeTwoImage" formControlName="runeTwoImage" type="text" required placeholder="Imagem da runa"/>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
             </div>
           </div>
         </div>
+        <!--END SECOND RUNE SLOT-->
 
-        <div class="col-sm">
+
+        <!--START THIRD RUNE SLOT-->
+        <div class="col-sm" formGroupName="thirdSlot">
           <h2 class="page-sub-title">Slot 3</h2>
 
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-three-name" class="form-control manage-input" name="runeThreeName" formControlName="runeThreeName" type="text" required placeholder="Nome da runa"/>
+          <div class="skins-array-container" formGroupName="subRuneOne">
+            <small>Slot: 1</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
+            </div>
+          </div>
+          <div class="skins-array-container" formGroupName="subRuneTwo">
+            <small>Slot: 2</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
+            </div>
+          </div>
+          <div class="skins-array-container" formGroupName="subRuneThree">
+            <small>Slot: 3</small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeName" formControlName="runeName" type="text" required placeholder="Nome da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeDescription" formControlName="runeDescription" type="text" required placeholder="Descrição da runa"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <input class="form-control manage-input" name="runeImage" formControlName="runeImage" type="text" required placeholder="Imagem da runa"/>
+              </div>
             </div>
           </div>
 
           <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-three-description" class="form-control manage-input" name="runeThreeDescription" formControlName="runeThreeDescription" type="text" required placeholder="Descrição da runa"/>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="input-group mb-3 input-container">
-              <input id="rune-three-image" class="form-control manage-input" name="runeThreeImage" formControlName="runeThreeImage" type="text" required placeholder="Imagem da runa"/>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="input-group mb-3 submit-button-container">
+            <div class="input-group mb-3 submit-button-container-center">
               <app-dynamic-button
                 (buttonAction)="runeForm.reset()"
                 [buttonWidth]="250"
@@ -199,7 +343,7 @@
 
               <app-dynamic-button
                 [buttonWidth]="250"
-                [buttonText]="'Cadastrar nova rune'"
+                [buttonText]="'Cadastrar nova runa'"
                 [buttonStyle]="'primary'"
                 [buttonType]="'submit'"
                 [buttonDisable]="!runeForm.valid"
@@ -208,10 +352,10 @@
             </div>
           </div>
         </div>
+        <!--END THIRD RUNE SLOT-->
+
+
       </div>
-
     </form>
-
   </div>
-
 </div>

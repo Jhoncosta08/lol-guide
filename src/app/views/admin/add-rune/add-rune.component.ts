@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,7 +11,7 @@ export class AddRuneComponent {
   runeForm!: FormGroup;
 
   constructor(private route: Router, private fb: FormBuilder) {
-
+    this.buildChampionDefaultForm();
   }
 
   buildChampionDefaultForm() {
@@ -23,48 +23,58 @@ export class AddRuneComponent {
 
       mainRune: new FormGroup({
         firstRune: new FormGroup({
-          firstRuneName: new FormControl(['', Validators.required]),
-          firstRuneDescription: new FormControl(['', Validators.required]),
-          firstRuneImage: new FormControl(['', Validators.required]),
-          firstRuneVideo: new FormControl(['', Validators.required]),
+          firstRuneName: new FormControl('', Validators.required),
+          firstRuneDescription: new FormControl('', Validators.required),
+          firstRuneImage: new FormControl('', Validators.required),
+          firstRuneVideo: new FormControl('', Validators.required),
         }),
 
         secondRune: new FormGroup({
-          secondRuneName: new FormControl(['', Validators.required]),
-          secondRuneDescription: new FormControl(['', Validators.required]),
-          secondRuneImage: new FormControl(['', Validators.required]),
-          secondRuneVideo: new FormControl(['', Validators.required]),
+          secondRuneName: new FormControl('', Validators.required),
+          secondRuneDescription: new FormControl('', Validators.required),
+          secondRuneImage: new FormControl('', Validators.required),
+          secondRuneVideo: new FormControl('', Validators.required),
         }),
 
         thirdRune: new FormGroup({
-          thirdRuneName: new FormControl(['', Validators.required]),
-          thirdRuneDescription: new FormControl(['', Validators.required]),
-          thirdRuneImage: new FormControl(['', Validators.required]),
-          thirdRuneVideo: new FormControl(['', Validators.required]),
+          thirdRuneName: new FormControl('', Validators.required),
+          thirdRuneDescription: new FormControl('', Validators.required),
+          thirdRuneImage: new FormControl('', Validators.required),
+          thirdRuneVideo: new FormControl('', Validators.required),
         }),
       }),
 
-      runeOne: new FormGroup({
-        runeOneName: new FormControl(['', Validators.required]),
-        runeOneDescription: new FormControl(['', Validators.required]),
-        runeOneImage: new FormControl(['', Validators.required]),
+      firstSlot: new FormGroup({
+        subRuneOne: this.defaultRuneFormGroupValues(),
+        subRuneTwo: this.defaultRuneFormGroupValues(),
+        subRuneThree: this.defaultRuneFormGroupValues(),
       }),
 
-      runeTwo: new FormGroup({
-        runeTwoName: new FormControl(['', Validators.required]),
-        runeTwoDescription: new FormControl(['', Validators.required]),
-        runeTwoImage: new FormControl(['', Validators.required]),
+      secondSlot: new FormGroup({
+        subRuneOne: this.defaultRuneFormGroupValues(),
+        subRuneTwo: this.defaultRuneFormGroupValues(),
+        subRuneThree: this.defaultRuneFormGroupValues(),
       }),
 
-      runeThree: new FormGroup({
-        runeThreeName: new FormControl(['', Validators.required]),
-        runeThreeDescription: new FormControl(['', Validators.required]),
-        runeThreeImage: new FormControl(['', Validators.required]),
+      thirdSlot: new FormGroup({
+        subRuneOne: this.defaultRuneFormGroupValues(),
+        subRuneTwo: this.defaultRuneFormGroupValues(),
+        subRuneThree: this.defaultRuneFormGroupValues()
       }),
-
-
 
     });
+  }
+
+  defaultRuneFormGroupValues(): FormGroup {
+    return new FormGroup({
+      runeName: new FormControl('', Validators.required),
+      runeDescription: new FormControl('', Validators.required),
+      runeImage: new FormControl('', Validators.required),
+    })
+  }
+
+  onSubmitRuneForm() {
+    console.log('form: ', this.runeForm.value);
   }
 
 }

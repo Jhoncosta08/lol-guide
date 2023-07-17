@@ -27,6 +27,13 @@
   align-items: center;
 }
 
+.submit-button-container-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #champion-form small, #rune-form small, #item-form small {
   color: $secondary-blue-two;
 }
