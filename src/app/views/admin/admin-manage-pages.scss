@@ -81,6 +81,10 @@
   margin: 2.188rem 0 0 0.188rem;
 }
 
+.textarea-container-no-margin {
+  border: 1px solid $primary-gold-one;
+}
+
 .textarea-container:hover {
   border-color: $primary-gold-three;
 }

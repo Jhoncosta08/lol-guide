@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RunesRoutingModule } from './runes-routing.module';
 import {RunesComponent} from "./runes.component";
 import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.module";
+import {ViewRuneModule} from "./view-rune/view-rune.module";
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {TitleDivisorModule} from "../../shared/title-divisor/title-divisor.modul
   imports: [
     CommonModule,
     RunesRoutingModule,
-    TitleDivisorModule
+    TitleDivisorModule,
+    ViewRuneModule
   ]
 })
 export class RunesModule { }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {RunesService} from "../../../services/runes.service";
 
 @Component({
   selector: 'app-add-rune',
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
 export class AddRuneComponent {
   runeForm!: FormGroup;
 
-  constructor(private route: Router, private fb: FormBuilder) {
+  constructor(private route: Router, private fb: FormBuilder, private runeService: RunesService) {
     this.buildChampionDefaultForm();
   }
 
@@ -22,7 +23,9 @@ export class AddRuneComponent {
       runeImage: ['', Validators.required],
 
       mainRune: new FormGroup({
+        id: new FormControl(crypto.randomUUID()),
         firstRune: new FormGroup({
+          id: new FormControl(crypto.randomUUID()),
           firstRuneName: new FormControl('', Validators.required),
           firstRuneDescription: new FormControl('', Validators.required),
           firstRuneImage: new FormControl('', Validators.required),
@@ -30,6 +33,7 @@ export class AddRuneComponent {
         }),
 
         secondRune: new FormGroup({
+          id: new FormControl(crypto.randomUUID()),
           secondRuneName: new FormControl('', Validators.required),
           secondRuneDescription: new FormControl('', Validators.required),
           secondRuneImage: new FormControl('', Validators.required),
@@ -37,6 +41,7 @@ export class AddRuneComponent {
         }),
 
         thirdRune: new FormGroup({
+          id: new FormControl(crypto.randomUUID()),
           thirdRuneName: new FormControl('', Validators.required),
           thirdRuneDescription: new FormControl('', Validators.required),
           thirdRuneImage: new FormControl('', Validators.required),
@@ -45,18 +50,21 @@ export class AddRuneComponent {
       }),
 
       firstSlot: new FormGroup({
+        id: new FormControl(crypto.randomUUID()),
         subRuneOne: this.defaultRuneFormGroupValues(),
         subRuneTwo: this.defaultRuneFormGroupValues(),
         subRuneThree: this.defaultRuneFormGroupValues(),
       }),
 
       secondSlot: new FormGroup({
+        id: new FormControl(crypto.randomUUID()),
         subRuneOne: this.defaultRuneFormGroupValues(),
         subRuneTwo: this.defaultRuneFormGroupValues(),
         subRuneThree: this.defaultRuneFormGroupValues(),
       }),
 
       thirdSlot: new FormGroup({
+        id: new FormControl(crypto.randomUUID()),
         subRuneOne: this.defaultRuneFormGroupValues(),
         subRuneTwo: this.defaultRuneFormGroupValues(),
         subRuneThree: this.defaultRuneFormGroupValues()
@@ -67,6 +75,7 @@ export class AddRuneComponent {
 
   defaultRuneFormGroupValues(): FormGroup {
     return new FormGroup({
+      id: new FormControl(crypto.randomUUID()),
       runeName: new FormControl('', Validators.required),
       runeDescription: new FormControl('', Validators.required),
       runeImage: new FormControl('', Validators.required),
@@ -74,7 +83,20 @@ export class AddRuneComponent {
   }
 
   onSubmitRuneForm() {
-    console.log('form: ', this.runeForm.value);
+    this.runeService.createNewRune(this.runeForm.value).then(res => {
+      this.updateRuneDocWithId(res.id, res.path);
+    }).catch(err => {
+      console.error('Error when tried to create a new champion', err);
+    })
+  }
+
+  updateRuneDocWithId(runeDocId: string, runeDocPath: string) {
+    this.runeService.updateRune(runeDocId).then(() => {
+      const params = { id: runeDocId };
+      void this.route.navigate([runeDocPath], {queryParams: params })
+    }).catch(err => {
+      console.log('Error when tried to set id', err);
+    })
   }
 
 }
