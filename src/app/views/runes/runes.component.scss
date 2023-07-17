@@ -14,12 +14,32 @@
   min-height: 65vh;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid $primary-gold-one;
+  border: 3px solid $primary-gold-dark;
   transition: 0.4s ease-out;
 }
 
+.feitiçaria-box:hover {
+  border-color: $spell-rune;
+}
+
+.precisão-box:hover {
+  border-color: $precision-rune;
+}
+
+.inspiração-box:hover {
+  border-color: $inspiration-rune;
+}
+
+.determinação-box:hover {
+  border-color: $determination-rune;
+}
+
+.dominação-box:hover {
+  border-color: $domination-rune;
+}
+
+
 .runes-box:hover {
-  border-color: $secondary-blue-two;
   transform: translateY(-10px);
   transition: 0.4s ease-out;
 }

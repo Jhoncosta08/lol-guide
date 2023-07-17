@@ -3,7 +3,7 @@
   <app-title-divisor [title]="'Runas'"></app-title-divisor>
     <div class="row">
 
-      <div *ngFor="let rune of runeList" class="col-sm runes-box" (click)="redirectToRunePage(rune.id)">
+      <div *ngFor="let rune of runeList" class="col-sm runes-box" [ngClass]="rune.runeName.toLowerCase()+'-box'" (click)="redirectToRunePage(rune.id)">
         <img class="rune-img" [ngClass]="rune.runeName.toLowerCase()" [src]="rune.runeImage" [alt]="rune.runeName">
         <p class="rune-name" [ngClass]="rune.runeName.toLowerCase()">{{ rune.runeName }}</p>
         <p class="rune-slogan">{{ rune.runeSlogan }}</p>
