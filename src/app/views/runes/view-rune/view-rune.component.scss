@@ -47,6 +47,7 @@
   align-items: center;
   cursor: pointer;
   opacity: 0.3;
+  transition: 0.4s ease-out;
   p {
     margin: 0 0 0 1rem;
   }
@@ -64,11 +65,22 @@
   }
 }
 
+.main-rune-one:hover, .main-rune-two:hover, .main-rune-three:hover {
+  transform: translateY(-10px);
+  transition: 0.4s ease-out;
+}
+
+.main-rune-one:hover ~ .main-rune-one, .main-rune-two:hover ~ .main-rune-two, .main-rune-three:hover ~ .main-rune-three{
+  position: relative;
+  transition: 0.4s ease-out;
+}
+
 .active-rune {
   opacity: 1;
+  transform: translateY(-10px);
 }
 
 .rune-video {
   width: 70%;
-  border: 3px solid wheat;
+  border: 3px solid;
 }

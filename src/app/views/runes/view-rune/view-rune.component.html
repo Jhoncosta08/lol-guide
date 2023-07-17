@@ -34,17 +34,15 @@
     </div>
 
     <div class="col-sm">
-
-
-      <video *ngIf="activeRune === 'main-one'" [autoplay]="true" [muted]="true" loop class="rune-video">
+      <video *ngIf="activeRune === 'main-one'" [autoplay]="true" [muted]="true" loop [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}" class="rune-video">
         <source [src]="runeDiretory+'/rune-one.mp4'" type="video/mp4">
       </video>
 
-      <video *ngIf="activeRune === 'main-two'" [autoplay]="true" [muted]="true" loop class="rune-video">
+      <video *ngIf="activeRune === 'main-two'" [autoplay]="true" [muted]="true" loop [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}" class="rune-video">
         <source [src]="runeDiretory+'/rune-two.mp4'" type="video/mp4">
       </video>
 
-      <video *ngIf="activeRune === 'main-three'" [autoplay]="true" [muted]="true" loop class="rune-video">
+      <video *ngIf="activeRune === 'main-three'" [autoplay]="true" [muted]="true" loop [ngStyle]="{'border-color': setRuneColor(rune.runeName.toLowerCase())}" class="rune-video">
         <source [src]="runeDiretory+'/rune-three.mp4'" type="video/mp4">
       </video>
     </div>
