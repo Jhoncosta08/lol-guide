@@ -9,6 +9,6 @@ export const environment  = {
     projectId: "lol-guide-web",
     storageBucket: "lol-guide-web.appspot.com",
     messagingSenderId: "947637903349",
-    appId: "1:947637903349:web:e3688dc91900062409cabc"
+    appId: "1:947637903349:web:e3688dc91900062409cabc",
   }
 }

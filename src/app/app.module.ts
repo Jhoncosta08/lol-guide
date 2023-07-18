@@ -22,8 +22,8 @@ import {getAuth, provideAuth} from "@angular/fire/auth";
     HttpClientModule,
     HeaderModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth(initializeApp(environment.firebase))),
-    provideFirestore(() => getFirestore(initializeApp(environment.firebase)))
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth())
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}],
   bootstrap: [AppComponent]
