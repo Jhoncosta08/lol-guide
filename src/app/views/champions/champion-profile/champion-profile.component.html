@@ -13,10 +13,12 @@
     </div>
 
     <div class="champ-description">
+      <h1>História do campeão</h1>
       <p>{{ champData.championLore }}</p>
     </div>
 
     <div class="row lane-container">
+      <h1>Jogabilidade do campeão</h1>
       <div class="col-sm lane-box">
         <div class="row">
           <p class="function-title">Função</p>
@@ -35,14 +37,14 @@
         <div class="row">
           <p class="function-title">Dificuldade</p>
           <div class="row df-row">
-            <div class="col-sm df-container">
+            <div class=" df-container">
               <div [ngClass]="champData.championDifficulty === 'Fácil' ? 'active' : ''" class="df-box"></div>
               <div [ngClass]="champData.championDifficulty === 'Moderado' ? 'active' : ''" class="df-box"></div>
               <div [ngClass]="champData.championDifficulty === 'Difícil' ? 'active' : ''" class="df-box"></div>
             </div>
           </div>
           <div class="col-sm">
-            <p class="function-value">Moderado</p>
+            <p class="function-value">{{ champData.championDifficulty }}</p>
           </div>
         </div>
       </div>

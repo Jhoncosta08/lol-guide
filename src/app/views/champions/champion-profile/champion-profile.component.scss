@@ -43,6 +43,15 @@ p {
   text-align: center;
 }
 
+.champ-description h1 {
+  padding: 0 0 1rem 0;
+  color: $primary-gold-one;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 .champ-description p {
   color: $grey-one;
   letter-spacing: 2px;
@@ -61,6 +70,15 @@ p {
   border: 1px solid $secondary-blue-two;
 }
 
+.lane-container h1 {
+  padding: 0 0 1rem 0;
+  color: $primary-gold-one;
+  letter-spacing: 2px;
+  line-height: 24px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
 .lane-icon {
   width: 20%;
   margin: 5px 0 5px 0;
@@ -68,6 +86,7 @@ p {
 
 .icon-box img {
   border: 2px solid $primary-gold-one;
+  width: 35%;
 }
 
 .function-title {
