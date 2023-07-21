@@ -141,3 +141,38 @@
   letter-spacing: 2px;
   text-transform: capitalize;
 }
+
+.rune-builder-container {
+  margin-top: 2rem;
+}
+
+.rune-builder-container a {
+  cursor: pointer;
+  color: $primary-gold-one;
+}
+
+.rune-builder-container a i {
+  margin-left: 10px;
+  position: relative;
+  transition: 0.4s ease-out;
+  font-size: 20px;
+}
+
+.rune-builder-container a:hover {
+  transition: 0.4s ease-out;
+  color: $secondary-blue-two;
+}
+
+.rune-builder-container a:hover ~ .rune-builder-container a {
+  transition: 0.4s ease-out;
+}
+
+.rune-builder-container a:hover > i {
+  transition: 0.4s ease-out;
+  margin-left: 20px;
+}
+
+.rune-builder-container a:hover ~ .rune-builder-container a i {
+  transition: 0.4s ease-out;
+}
+
