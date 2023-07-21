@@ -1,70 +1,60 @@
 <div class="skill-container">
   <div class="row">
 
-    <div class="col-sm">
-
-      <div class="skill-icon-container">
-        <img [src]="this.championSkills.passive.skillImage"
-             [alt]="this.championSkills.passive.skillName"
-             [ngClass]="{'active-skill ': activeSkill === 'passive'}"
-             (click)="changeActiveSkill('passive')"
-        />
-
-        <img [src]="this.championSkills.q.skillImage"
-             [alt]="this.championSkills.q.skillName"
-             [ngClass]="{'active-skill ': activeSkill === 'q'}"
-             (click)="changeActiveSkill('q')"
-        />
-
-        <img [src]="this.championSkills.w.skillImage"
-             [alt]="this.championSkills.w.skillName"
-             [ngClass]="{'active-skill ': activeSkill === 'w'}"
-             (click)="changeActiveSkill('w')"
-        />
-
-        <img [src]="this.championSkills.e.skillImage"
-             [alt]="this.championSkills.e.skillName"
-             [ngClass]="{'active-skill ': activeSkill === 'e'}"
-             (click)="changeActiveSkill('e')"
-        />
-
-        <img [src]="this.championSkills.r.skillImage"
-             [alt]="this.championSkills.r.skillName"
-             [ngClass]="{'active-skill ': activeSkill === 'r'}"
-             (click)="changeActiveSkill('r')"
-        />
+    <div class="col-sm skill-item-container">
+      <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'passive'}" (click)="changeActiveSkill('passive')">
+        <img [src]="this.championSkills.passive.skillImage" [alt]="this.championSkills.passive.skillName"/>
+        <p class="skill-name">{{ this.championSkills.passive.skillName }}</p>
+        <p class="skill-description">{{ this.championSkills.passive.skillDescription }}</p>
       </div>
 
-      <div class="skill-text-container">
-        <p class="skill-name">{{ this.championSkills[activeSkill].skillName }}</p>
-        <p>{{ this.championSkills[activeSkill].skillDescription }}</p>
+      <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'q'}" (click)="changeActiveSkill('q')">
+        <img [src]="this.championSkills.q.skillImage" [alt]="this.championSkills.q.skillName"/>
+        <p class="skill-name">{{ this.championSkills.q.skillName }}</p>
+        <p class="skill-description">{{ this.championSkills.q.skillDescription }}</p>
       </div>
 
+      <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'w'}" (click)="changeActiveSkill('w')">
+        <img [src]="this.championSkills.w.skillImage" [alt]="this.championSkills.w.skillName"/>
+        <p class="skill-name">{{ this.championSkills.w.skillName }}</p>
+        <p class="skill-description">{{ this.championSkills.w.skillDescription }}</p>
+      </div>
+
+      <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'e'}" (click)="changeActiveSkill('e')">
+        <img [src]="this.championSkills.e.skillImage" [alt]="this.championSkills.e.skillName"/>
+        <p class="skill-name">{{ this.championSkills.e.skillName }}</p>
+        <p class="skill-description">{{ this.championSkills.e.skillDescription }}</p>
+      </div>
+
+      <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'r'}" (click)="changeActiveSkill('r')">
+        <img [src]="this.championSkills.r.skillImage" [alt]="this.championSkills.r.skillName"/>
+        <p class="skill-name">{{ this.championSkills.r.skillName }}</p>
+        <p class="skill-description">{{ this.championSkills.r.skillDescription }}</p>
+      </div>
     </div>
 
     <div class="col-sm skill-video-container">
-      <img class="video-default-img" *ngIf="showDefaultImg" src="assets/img/no-video.png" [alt]="this.championSkills[activeSkill].skillName">
+        <img class="video-default-img" *ngIf="showDefaultImg" src="assets/img/no-video.png" [alt]="this.championSkills[activeSkill].skillName">
 
-      <video *ngIf="activeSkill === 'passive' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
-        <source [src]="this.championSkills.passive.skillVideo" type="video/mp4">
-      </video>
+        <video *ngIf="activeSkill === 'passive' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
+          <source [src]="this.championSkills.passive.skillVideo" type="video/mp4">
+        </video>
 
-      <video *ngIf="activeSkill === 'q' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
-        <source [src]="this.championSkills.q.skillVideo" type="video/mp4">
-      </video>
+        <video *ngIf="activeSkill === 'q' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
+          <source [src]="this.championSkills.q.skillVideo" type="video/mp4">
+        </video>
 
-      <video *ngIf="activeSkill === 'w' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
-        <source [src]="this.championSkills.w.skillVideo" type="video/mp4">
-      </video>
+        <video *ngIf="activeSkill === 'w' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
+          <source [src]="this.championSkills.w.skillVideo" type="video/mp4">
+        </video>
 
-      <video *ngIf="activeSkill === 'e' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
-        <source [src]="this.championSkills.e.skillVideo" type="video/mp4">
-      </video>
+        <video *ngIf="activeSkill === 'e' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
+          <source [src]="this.championSkills.e.skillVideo" type="video/mp4">
+        </video>
 
-      <video *ngIf="activeSkill === 'r' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
-        <source [src]="this.championSkills.r.skillVideo" type="video/mp4">
-      </video>
-    </div>
-
+        <video *ngIf="activeSkill === 'r' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
+          <source [src]="this.championSkills.r.skillVideo" type="video/mp4">
+        </video>
+      </div>
   </div>
 </div>
