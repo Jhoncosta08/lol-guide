@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {RunesService} from "../../../services/runes.service";
 import {ActivatedRoute} from "@angular/router";
-import {main} from "@popperjs/core";
 
 @Component({
   selector: 'app-view-rune',
