@@ -48,7 +48,7 @@ export class AddChampionComponent {
         mage: new FormControl('Meio'),
         adc: new FormControl('Adc'),
         jungle: new FormControl('Selva'),
-        support: new FormControl('Support'),
+        support: new FormControl('Suporte'),
       }),
       championSkins: new FormArray([]),
       championsSkill: new FormGroup({
