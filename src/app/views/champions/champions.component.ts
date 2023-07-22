@@ -20,10 +20,10 @@ export class ChampionsComponent implements OnInit {
     this.championsService.getChampionsList().subscribe({
       next: championsList => {
         this.championsList = championsList;
-        this.showSpinner = false;
+        this.closeSpinner();
       },
       error: err => {
-        this.showSpinner = false;
+        this.closeSpinner();
         console.error('Error when tried to get champions list', err);
       }
     })
@@ -32,4 +32,9 @@ export class ChampionsComponent implements OnInit {
   redirectToChampPage(championId: string) {
     void this.route.navigate([`champions/${championId}`], )
   }
+
+  closeSpinner(): void {
+    setTimeout(() => this.showSpinner = false, 400);
+  }
+
 }
