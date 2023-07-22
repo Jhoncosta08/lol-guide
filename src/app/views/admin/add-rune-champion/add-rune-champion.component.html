@@ -1,1 +1,182 @@
-<p>add-rune-champion works!</p>
+<div class="container-fluid rune-page-container">
+  <div class="rune-form-container">
+
+    <app-title-divisor [title]="'Criação'"></app-title-divisor>
+    <form [formGroup]="addRuneForm" id="rune-form" (ngSubmit)="onSubmitAddRuneForm()" autocomplete="off">
+      <div class="row">
+
+        <div class="col-sm">
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <select class="form-select manage-input" name="championName" required (change)="getSelectedChampion($event)">
+                <option selected disabled hidden>Selecione o campeão:</option>
+                <option *ngFor="let champion of championsList" [value]="champion.id">{{ champion.championName }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <input class="form-control manage-input" name="runeTitle" formControlName="runeTitle" type="text" required placeholder="Titulo da runa"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3 textarea-container">
+              <textarea class="form-control textarea-input" name="runeDescription" formControlName="runeDescription" required placeholder="Descrição da runa" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm" formGroupName="runeOne">
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <select class="form-select manage-input" formControlName="mainRune" name="mainRune" required (change)="setMainRune($event)">
+                <option selected disabled hidden>Runa principal do campeão:</option>
+                <option *ngFor="let rune of runeList" [value]="rune.mainRune.id">{{ rune.runeName }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div *ngIf="showFirstSlots" class="sub-slots skins-array-container">
+            <small>Slot Principal: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="mainSlot" name="mainSlot" required>
+                  <option selected disabled hidden>Primeiro slot:</option>
+                  <option [value]="mainRuneSelected.mainRune.firstRune.id">{{ mainRuneSelected.mainRune.firstRune.firstRuneName }}</option>
+                  <option [value]="mainRuneSelected.mainRune.secondRune.id">{{ mainRuneSelected.mainRune.secondRune.secondRuneName }}</option>
+                  <option [value]="mainRuneSelected.mainRune.thirdRune.id">{{ mainRuneSelected.mainRune.thirdRune.thirdRuneName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="showFirstSlots" class="sub-slots skins-array-container">
+            <small>Slot 1: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="slotOne" name="slotOne" required>
+                  <option selected disabled hidden>Primeiro slot:</option>
+                  <option [value]="mainRuneSelected.firstSlot.subRuneOne.id">{{ mainRuneSelected.firstSlot.subRuneOne.runeName }}</option>
+                  <option [value]="mainRuneSelected.firstSlot.subRuneTwo.id">{{ mainRuneSelected.firstSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="mainRuneSelected.firstSlot.subRuneThree.id">{{ mainRuneSelected.firstSlot.subRuneThree.runeName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="showFirstSlots" class="sub-slots skins-array-container">
+            <small>Slot 2: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="slotTwo" name="slotTwo" required>
+                  <option selected disabled hidden>Segundo slot:</option>
+                  <option [value]="mainRuneSelected.secondSlot.subRuneOne.id">{{ mainRuneSelected.secondSlot.subRuneOne.runeName }}</option>
+                  <option [value]="mainRuneSelected.secondSlot.subRuneTwo.id">{{ mainRuneSelected.secondSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="mainRuneSelected.secondSlot.subRuneThree.id">{{ mainRuneSelected.secondSlot.subRuneThree.runeName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="showFirstSlots" class="sub-slots skins-array-container">
+            <small>Slot 3: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="slotThree" name="slotThree" required>
+                  <option selected disabled hidden>Terceiro slot:</option>
+                  <option [value]="mainRuneSelected.thirdSlot.subRuneOne.id">{{ mainRuneSelected.thirdSlot.subRuneOne.runeName }}</option>
+                  <option [value]="mainRuneSelected.thirdSlot.subRuneTwo.id">{{ mainRuneSelected.thirdSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="mainRuneSelected.thirdSlot.subRuneThree.id">{{ mainRuneSelected.thirdSlot.subRuneThree.runeName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="col-sm"  formGroupName="runeTwo">
+
+          <div class="form-group">
+            <div class="input-group mb-3 input-container">
+              <select class="form-select manage-input" formControlName="subRune" name="subRune" required (change)="setSubRune($event)">
+                <option selected disabled hidden>Runa secundária do campeão:</option>
+                <option *ngFor="let rune of runeList" [value]="rune.mainRune.id">{{ rune.runeName }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div *ngIf="showSecondsSlots" class="sub-slots skins-array-container">
+            <small>Slot 1: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="slotOne" name="slotOne" required>
+                  <option selected disabled hidden>Primeiro slot:</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneOne.id">{{ subRuneSelected.firstSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneTwo.id">{{ subRuneSelected.firstSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneThree.id">{{ subRuneSelected.firstSlot.subRuneThree.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneOne.id">{{ subRuneSelected.secondSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneTwo.id">{{ subRuneSelected.secondSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneThree.id">{{ subRuneSelected.secondSlot.subRuneThree.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneOne.id">{{ subRuneSelected.thirdSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneTwo.id">{{ subRuneSelected.thirdSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneThree.id">{{ subRuneSelected.thirdSlot.subRuneThree.runeName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="showSecondsSlots" class="sub-slots skins-array-container">
+            <small>Slot 1: </small>
+            <div class="form-group">
+              <div class="input-group mb-3 input-container">
+                <select class="form-select manage-input" formControlName="slotTwo" name="slotTwo" required>
+                  <option selected disabled hidden>Segundo slot:</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneOne.id">{{ subRuneSelected.firstSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneTwo.id">{{ subRuneSelected.firstSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.firstSlot.subRuneThree.id">{{ subRuneSelected.firstSlot.subRuneThree.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneOne.id">{{ subRuneSelected.secondSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneTwo.id">{{ subRuneSelected.secondSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.secondSlot.subRuneThree.id">{{ subRuneSelected.secondSlot.subRuneThree.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneOne.id">{{ subRuneSelected.thirdSlot.subRuneOne.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneTwo.id">{{ subRuneSelected.thirdSlot.subRuneTwo.runeName }}</option>
+                  <option [value]="subRuneSelected.thirdSlot.subRuneThree.id">{{ subRuneSelected.thirdSlot.subRuneThree.runeName }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group mb-3 submit-button-container">
+              <app-dynamic-button
+                (buttonAction)="addRuneForm.reset()"
+                [buttonWidth]="200"
+                [buttonText]="'Limpar formulário'"
+                [buttonStyle]="'primary'"
+                [buttonType]="'button'"
+                [buttonDisable]="false"
+                [buttonId]="'champion-form-clear-btn'">
+              </app-dynamic-button>
+
+              <app-dynamic-button
+                [buttonWidth]="300"
+                [buttonText]="'Adicionar nova runa ao campeão'"
+                [buttonStyle]="'primary'"
+                [buttonType]="'submit'"
+                [buttonDisable]="!addRuneForm.valid"
+                [buttonId]="'champion-form-btn'">
+              </app-dynamic-button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>

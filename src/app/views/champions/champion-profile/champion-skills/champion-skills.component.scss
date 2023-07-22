@@ -67,7 +67,7 @@
   align-items: center;
 }
 
-.skill-video-container video {
+.skill-video-container video, .skill-video-container img {
   width:70%;
   border: 3px solid $primary-gold-one;
 }

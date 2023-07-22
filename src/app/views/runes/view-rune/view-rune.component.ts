@@ -27,7 +27,6 @@ export class ViewRuneComponent implements OnInit {
       this.rune = res.data();
       this.getRuneDiretory();
       this.showSpinner = false;
-      console.log('rune: ', this.rune);
     }).catch(err => {
       this.showSpinner = false;
       console.error('Error when tried to get champ by id', err);

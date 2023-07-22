@@ -5,7 +5,7 @@ import {AuthService} from "../auth.service";
 
 @Injectable()
 export class TokenInterceptor implements  HttpInterceptor {
-  constructor(private authService: AuthService) {console.log('TokenInterceptor')}
+  constructor(private authService: AuthService) {}
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     return this.authService.user.pipe(take(1), exhaustMap(user => {
       if(!user) return next.handle(req);
