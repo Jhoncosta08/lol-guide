@@ -34,13 +34,14 @@ export class ChampionProfileComponent implements OnInit{
 
   getChampionLanes(): void {
     const champDataLane = this.champData?.championLanes;
-    const championLanes = this.championLanes;
+    let championLanes: any[] = [];
     const laneCategories = ['top', 'mage', 'adc', 'jungle', 'support'];
     for (const lane of laneCategories) {
       if (champDataLane[lane] && !championLanes.includes(champDataLane[lane])) {
         championLanes.push(champDataLane[lane]);
       }
     }
+    this.championLanes = championLanes
   }
 
   checkIconLane(lane: string): string {

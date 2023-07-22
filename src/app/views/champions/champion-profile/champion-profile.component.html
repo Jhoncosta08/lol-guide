@@ -60,7 +60,9 @@
       <app-champion-skins [championSkins]="champData.championSkins" [championName]="champData.championName"></app-champion-skins>
     </div>
 
-
+    <div *ngIf="champData.rune" class="runes-container">
+      <app-champion-runes [championRunes]="champData.rune"></app-champion-runes>
+    </div>
 
   </div>
 </div>

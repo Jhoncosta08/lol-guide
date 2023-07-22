@@ -5,6 +5,7 @@ import {GradientSpinnerModule} from "../../../shared/gradient-spinner/gradient-s
 import {TitleDivisorModule} from "../../../shared/title-divisor/title-divisor.module";
 import {ChampionSkillsModule} from "./champion-skills/champion-skills.module";
 import {ChampionSkinsModule} from "./champion-skins/champion-skins.module";
+import {ChampionRunesModule} from "./champion-runes/champion-runes.module";
 
 
 
@@ -17,7 +18,8 @@ import {ChampionSkinsModule} from "./champion-skins/champion-skins.module";
       GradientSpinnerModule,
       TitleDivisorModule,
       ChampionSkillsModule,
-      ChampionSkinsModule
+      ChampionSkinsModule,
+      ChampionRunesModule
     ]
 })
 export class ChampionProfileModule { }
