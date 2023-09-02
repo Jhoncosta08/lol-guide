@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.authService.autoLogin();
     this.authService.user.subscribe(user => {
       this.user = user;
-      if(user && user.id && user.id === this.adminId)  this.isAdminUser = true;
+      this.isAdminUser = !!(user && user.id && user.id === this.adminId);
     });
   }
 }
