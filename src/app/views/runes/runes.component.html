@@ -5,23 +5,23 @@
     <div *ngIf="!showSpinner" class="row">
 
       <div *ngFor="let rune of runeList" class="col-sm runes-box" [ngClass]="rune.runeName.toLowerCase()+'-box'" (click)="redirectToRunePage(rune.id)">
-        <img class="rune-img" [ngClass]="rune.runeName.toLowerCase()" [src]="rune.runeImage" [alt]="rune.runeName">
+        <img class="rune-img" [ngClass]="rune.runeName.toLowerCase()" [src]="rune.runeImage" [alt]="rune.runeName" loading="lazy">
         <p class="rune-name" [ngClass]="rune.runeName.toLowerCase()">{{ rune.runeName }}</p>
         <p class="rune-slogan">{{ rune.runeSlogan }}</p>
 
         <div class="main-runes">
           <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.firstRune.firstRuneName}}</p>
-          <img [src]="rune.mainRune.firstRune.firstRuneImage" [alt]="rune.mainRune.firstRune.firstRuneName">
+          <img [src]="rune.mainRune.firstRune.firstRuneImage" [alt]="rune.mainRune.firstRune.firstRuneName" loading="lazy">
         </div>
 
         <div class="main-runes">
           <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.secondRune.secondRuneName}}</p>
-          <img [src]="rune.mainRune.secondRune.secondRuneImage" [alt]="rune.mainRune.secondRune.secondRuneName">
+          <img [src]="rune.mainRune.secondRune.secondRuneImage" [alt]="rune.mainRune.secondRune.secondRuneName" loading="lazy">
         </div>
 
         <div class="main-runes">
           <p [ngClass]="rune.runeName.toLowerCase()" class="main-rune-name">{{rune.mainRune.thirdRune.thirdRuneName}}</p>
-          <img [src]="rune.mainRune.thirdRune.thirdRuneImage" [alt]="rune.mainRune.thirdRune.thirdRuneName">
+          <img [src]="rune.mainRune.thirdRune.thirdRuneImage" [alt]="rune.mainRune.thirdRune.thirdRuneName" loading="lazy">
         </div>
 
         <div class="main-rune-description">
@@ -32,7 +32,7 @@
 
       <div class="row">
         <div class="col-sm rune-builder-container">
-          <a href="https://br.leagueoflegends.com/pt/featured/preseason-update/8300-8351" target="_blank">
+          <a href="https://br.leagueoflegends.com/pt/featured/preseason-update/8300-8351?build=41211246" target="_blank">
             ACESSAR O CRIADOR DE RUNAS<i class="bi bi-arrow-right"></i>
           </a>
         </div>

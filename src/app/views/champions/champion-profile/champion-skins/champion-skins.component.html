@@ -7,7 +7,7 @@
       </div>
 
       <div class="highlight-image">
-        <img [src]="activeSkinUrl" [alt]="activeSkinName">
+        <img [src]="activeSkinUrl" [alt]="activeSkinName" loading="lazy" />
       </div>
 
       <div class="thumb-img">
@@ -16,6 +16,7 @@
              [src]="skin.skinUrl"
              [alt]="skin.skinName"
              (click)="changeActiveSkin(skin.skinName, skin.skinUrl)"
+             loading="lazy"
         />
       </div>
 

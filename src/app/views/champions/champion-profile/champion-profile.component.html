@@ -9,7 +9,7 @@
     </div>
 
     <div class="champ-img-container">
-      <img [src]="champData.championSplash" [alt]="champData.championName"/>
+      <img [src]="champData.championSplash" [alt]="champData.championName" loading="lazy"/>
     </div>
 
     <div class="champ-description">
@@ -23,14 +23,14 @@
         <div class="row">
           <p class="function-title">Função</p>
           <div *ngFor="let lane of championLanes" class="col-sm">
-            <img class="lane-icon" [src]="checkIconLane(lane)" [alt]="lane">
+            <img class="lane-icon" [src]="checkIconLane(lane)" [alt]="lane" loading="lazy">
             <p class="function-value">{{ lane }}</p>
           </div>
         </div>
       </div>
 
       <div class="col-sm icon-box">
-        <img [src]="champData.championIcon" [alt]="champData.championName"/>
+        <img [src]="champData.championIcon" [alt]="champData.championName" loading="lazy"/>
       </div>
 
       <div class="col-sm difficulty-box">

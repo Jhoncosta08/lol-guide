@@ -1,4 +1,5 @@
 export interface ChampionInterface {
+  championDifficulty: string,
   championUrl: string,
   championName: string,
   championLore: string,
@@ -7,32 +8,35 @@ export interface ChampionInterface {
   championTitle: string,
   championLanes?: ChampionLanes,
   championSkins?: ChampionSkins,
-  championSkills?: ChampionSkills,
+  championSkill?: ChampionSkills,
 }
 
 export interface ChampionLanes {
-  championLane: string[]
+  adc: string | boolean,
+  jungle: string | boolean,
+  mage: string | boolean,
+  support: string | boolean,
+  top: string | boolean,
 }
 
 export interface ChampionSkins {
-  skins: [{
-    name: string,
-    imageUrl: string
-  }]
+  skins: {
+    skinName: string,
+    skinUrl: string
+  }
 }
 
 export interface SkillsDefaultsValues {
-  description: string,
-  icon: string,
-  name: string,
-  poster: string,
-  video: string
+  skillDescription: string,
+  skillName: string,
+  skillImage: string,
+  skillVideo: string
 }
 
 export interface ChampionSkills {
-  championPassive: SkillsDefaultsValues,
-  championQ: SkillsDefaultsValues,
-  championW: SkillsDefaultsValues,
-  championE: SkillsDefaultsValues,
-  championR: SkillsDefaultsValues
+  passive: SkillsDefaultsValues,
+  q: SkillsDefaultsValues,
+  w: SkillsDefaultsValues,
+  e: SkillsDefaultsValues,
+  r: SkillsDefaultsValues
 }

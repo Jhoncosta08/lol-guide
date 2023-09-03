@@ -3,38 +3,38 @@
 
     <div class="col-sm skill-item-container">
       <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'passive'}" (click)="changeActiveSkill('passive')">
-        <img [src]="this.championSkills.passive.skillImage" [alt]="this.championSkills.passive.skillName"/>
+        <img [src]="this.championSkills.passive.skillImage" [alt]="this.championSkills.passive.skillName" loading="lazy"/>
         <p class="skill-name">{{ this.championSkills.passive.skillName }}</p>
         <p class="skill-description">{{ this.championSkills.passive.skillDescription }}</p>
       </div>
 
       <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'q'}" (click)="changeActiveSkill('q')">
-        <img [src]="this.championSkills.q.skillImage" [alt]="this.championSkills.q.skillName"/>
+        <img [src]="this.championSkills.q.skillImage" [alt]="this.championSkills.q.skillName" loading="lazy"/>
         <p class="skill-name">{{ this.championSkills.q.skillName }}</p>
         <p class="skill-description">{{ this.championSkills.q.skillDescription }}</p>
       </div>
 
       <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'w'}" (click)="changeActiveSkill('w')">
-        <img [src]="this.championSkills.w.skillImage" [alt]="this.championSkills.w.skillName"/>
+        <img [src]="this.championSkills.w.skillImage" [alt]="this.championSkills.w.skillName" loading="lazy"/>
         <p class="skill-name">{{ this.championSkills.w.skillName }}</p>
         <p class="skill-description">{{ this.championSkills.w.skillDescription }}</p>
       </div>
 
       <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'e'}" (click)="changeActiveSkill('e')">
-        <img [src]="this.championSkills.e.skillImage" [alt]="this.championSkills.e.skillName"/>
+        <img [src]="this.championSkills.e.skillImage" [alt]="this.championSkills.e.skillName" loading="lazy"/>
         <p class="skill-name">{{ this.championSkills.e.skillName }}</p>
         <p class="skill-description">{{ this.championSkills.e.skillDescription }}</p>
       </div>
 
       <div class="skill-item" [ngClass]="{'active-skill': activeSkill === 'r'}" (click)="changeActiveSkill('r')">
-        <img [src]="this.championSkills.r.skillImage" [alt]="this.championSkills.r.skillName"/>
+        <img [src]="this.championSkills.r.skillImage" [alt]="this.championSkills.r.skillName" loading="lazy"/>
         <p class="skill-name">{{ this.championSkills.r.skillName }}</p>
         <p class="skill-description">{{ this.championSkills.r.skillDescription }}</p>
       </div>
     </div>
 
     <div class="col-sm skill-video-container">
-        <img class="video-default-img" *ngIf="showDefaultImg" src="assets/img/no-video.png" [alt]="this.championSkills[activeSkill].skillName">
+        <img class="video-default-img" *ngIf="showDefaultImg" src="assets/img/no-video.png" [alt]="this.championSkills[activeSkill].skillName" loading="lazy">
 
         <video *ngIf="activeSkill === 'passive' && !showDefaultImg" [autoplay]="true" [muted]="true" loop class="skill-video box">
           <source [src]="this.championSkills.passive.skillVideo" type="video/mp4">

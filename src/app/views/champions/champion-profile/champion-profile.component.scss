@@ -86,7 +86,9 @@ p {
 
 .icon-box img {
   border: 2px solid $primary-gold-one;
-  width: 35%;
+  width: 100%;
+  max-width: 50px;
+  height: auto;
 }
 
 .function-title {
