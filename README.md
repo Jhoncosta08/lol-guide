@@ -1,10 +1,12 @@
 # Lol Guide
 
 ## About the project
->
+>The application is an interactive platform based on the game League of Legends, designed to provide a rich and detailed experience for fans of the game. Users can create accounts and log in to access an extensive list of champions. Upon selecting a champion, detailed information is presented, including the lane where the champion plays, their abilities with illustrative videos, the character's lore, and available skins. This functionality allows players to deepen their knowledge of their favorite champions and explore new characters in an engaging and informative way.
+
+Additionally, the application features a dedicated page for the game's runes. In this section, users can explore a comprehensive list of runes, and by clicking on one, they can access explanatory videos, information about associated minor runes, and detailed descriptions of each. For administrators, the system offers advanced features such as creating and editing champions, managing runes, and assigning specific runes to champions. These administrative tools ensure that the app's content is always up-to-date and aligned with the latest changes in the game, providing a consistently relevant experience for users.
 
 ## Project Url:
->* [Lol Guide]https://lol-guide-web.web.app
+[Lol Guide](https://lol-guide-web.web.app)
 
 ## Main technologies used in the project
 >* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
