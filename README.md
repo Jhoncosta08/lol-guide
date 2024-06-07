@@ -12,7 +12,7 @@
 >* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 >* This project has implemented [Bootstrap](https://getbootstrap.com) version 5.3.0
 >* This project has implemented [ng-bootstrap](https://ng-bootstrap.github.io/) version 15.1.0
->* >* This project has implemented [bootstrap icons](https://icons.getbootstrap.com/) version 1.10.5
+>* This project has implemented [bootstrap icons](https://icons.getbootstrap.com/) version 1.10.5
 
 ## About bootstrap
 >For standardization, best practices and responsiveness, when developing new pages, think about the structure of rows and columns following the grid pattern.
