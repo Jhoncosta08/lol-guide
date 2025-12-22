@@ -1,8 +1,5 @@
 {
   "projects": {
-    "lol-guide-id": "lol-guide-web",
-    "default": "lol-guide-web"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "lol-guide-mgr"
+  }
 }
