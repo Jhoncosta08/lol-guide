@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 export class AppComponent implements OnInit {
   isAdminUser: boolean = false;
   user: any;
-  adminId: string = 'UbRHQT1O85RPvPmM4Zsoz4c7ba32';
+  adminId: string = 'USJBPQXbZ4P8zcVWJDovkYlair93';
   constructor(private authService: AuthService, public router: Router) {}
 
   ngOnInit(): void {
